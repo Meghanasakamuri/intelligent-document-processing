@@ -1,0 +1,77 @@
+# 1. Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# 2. Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*$py.class
+
+# 3. Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 4. Environment secrets
+.env
+.env.*
+!.env.example
+
+# 5. SQLite databases and storage
+*.db
+*.sqlite
+*.sqlite3
+backend/data/
+
+# 6. Uploaded documents and user files
+backend/uploads/
+uploads/
+
+# 7. Python-generated files, test coverage, and logs
+*.log
+logs/
+*.egg-info/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# 8. Build folders
+dist/
+build/
+dist-ssr/
+out/
+
+# 9. IDE and operating system temporary files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 10. Large ML model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+models/
+checkpoints/
