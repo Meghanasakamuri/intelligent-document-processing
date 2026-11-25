@@ -9,15 +9,13 @@ is only a count of fields that were found.
 import os
 import re
 
-import fitz
+import pymupdf as fitz
 import pytesseract
 from PIL import Image, ImageOps
 
+from app.config import TESSERACT_CMD
 
-pytesseract.pytesseract.tesseract_cmd = os.environ.get(
-    "TESSERACT_CMD",
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe",
-)
+pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
 
 NOT_FOUND = "Not found"
 MAX_PDF_PAGES = 10
@@ -93,9 +91,10 @@ def preprocess_image(image):
 def ocr_image(image):
     prepared = preprocess_image(image)
     try:
+        from app.config import TESSERACT_OEM, TESSERACT_PSM
         text = pytesseract.image_to_string(
             prepared,
-            config="--oem 3 --psm 6",
+            config=f"--oem {TESSERACT_OEM} --psm {TESSERACT_PSM}",
             timeout=60,
         )
         return text or "", None
@@ -259,58 +258,197 @@ def _search_amount(upper_text, labels):
 
 
 def _search_date(text):
-    date_pattern = (
-        r"(\d{1,2}[-/]\d{1,2}[-/]\d{2,4}"
-        r"|\d{1,2}\s+(?:JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
-        r"[A-Z]*\s+\d{2,4})"
-    )
+    # Support DD/Mon/YYYY (e.g. 21/Sep/2026), DD-MM-YYYY, YYYY-MM-DD
     labeled = re.search(
-        r"(?:INVOICE\s*DATE|BILL\s*DATE|DATE\s*OF\s*ISSUE|"
-        r"RECEIPT\s*DATE|DATED|DATE)\s*[:.]?\s*"
-        + date_pattern,
-        text.upper(),
+        r"(?:INVOICE\s*DATE|BILL\s*DATE|DATE\s*OF\s*ISSUE|RECEIPT\s*DATE|DATED|DATE)\s*[:.\-]?\s*\n?\s*"
+        r"(\d{1,2}[-/](?:[A-Za-z]{3}|\d{1,2})[-/]\d{2,4}|\d{4}[-/]\d{1,2}[-/]\d{1,2})",
+        text,
+        re.IGNORECASE,
     )
     if labeled:
-        return labeled.group(1)
+        return labeled.group(1).strip()
 
-    fallback = re.search(date_pattern, text.upper())
-    if fallback:
-        return fallback.group(1)
+    # Fallback to date patterns with valid day (1-31) and year (1990-2040)
+    for m in re.finditer(r"\b(\d{1,2}[-/](?:[A-Za-z]{3}|\d{1,2})[-/]\d{4}|\d{4}[-/]\d{1,2}[-/]\d{1,2})\b", text):
+        cand = m.group(1).strip()
+        parts = re.split(r"[-/]", cand)
+        if len(parts) == 3:
+            # Avoid door numbers like 76-14-95
+            try:
+                if len(parts[0]) == 4: # YYYY-MM-DD
+                    if 1990 <= int(parts[0]) <= 2040 and 1 <= int(parts[1]) <= 12:
+                        return cand
+                else: # DD-MM-YYYY or DD-Mon-YYYY
+                    if int(parts[0]) <= 31 and 1990 <= int(parts[2]) <= 2040:
+                        return cand
+            except ValueError:
+                # Month name like Sep
+                return cand
     return None
 
 
 def _party_name(text):
     skip = re.compile(
-        r"^(TAX\s+)?INVOICE\b|^(CASH\s+)?RECEIPT\b|^CASH\s+MEMO\b|"
-        r"^ORIGINAL\b|^DUPLICATE\b|^PAGE\b",
+        r"^(?:TAX\s+)?INVOICE\b|^(?:CASH\s+)?RECEIPT\b|^CASH\s+MEMO\b|"
+        r"^ORIGINAL\b|^DUPLICATE\b|^PAGE\b|^GSTIN\b|^GST\s*NO\b|^GST:\b|"
+        r"^EMAIL\b|^CELL\b|^PHONE\b|^TEL\b|^D\.NO\b|^PLOT\b|^ADDRESS\b|"
+        r"^20B\b|^21B\b|^WLF\b|^PAN\s*NO\b|^STATE\s*CODE\b|^STATE\s*NAME\b|"
+        r"^\(|^DISTRIBUTOR\b|^MANUFACTURER\b|^DEALERS?\b",
         re.IGNORECASE,
     )
-    for line in text.splitlines():
+    lines = text.splitlines()
+    # Check top lines first
+    for line in lines[:15]:
         clean = re.sub(r"\s+", " ", line).strip()
-        if len(clean) < 3 or skip.match(clean):
+        if len(clean) < 3 or skip.match(clean) or clean.startswith("(") or clean.endswith(")"):
             continue
         if re.fullmatch(r"[\d\W_]+", clean):
             continue
-        return clean
+        # Strip leading signatory noise e.g. "For SIVA SAI ENTERPRISES"
+        cleaned_vendor = re.sub(r"^(?:FOR|M/S\.?|MESSRS)\s+", "", clean, flags=re.IGNORECASE).strip()
+        if any(c.isalpha() for c in cleaned_vendor) and len(cleaned_vendor) >= 3:
+            return cleaned_vendor
+
+    # Check footer signatory line if top header was missed (e.g. "For SIVA SAI ENTERPRISES")
+    for line in lines:
+        m_for = re.match(r"^\s*FOR\s+([A-Za-z0-9\s&.,'()-]+)$", line, re.IGNORECASE)
+        if m_for:
+            name = m_for.group(1).strip(" :.-#")
+            if len(name) >= 3 and not any(k in name.upper() for k in ["SIGNATURE", "AUTHORISED", "CUSTOMER", "RECEIVER"]):
+                return name
     return None
 
 
-def _gst_number(upper_text):
-    match = re.search(
-        r"\b\d{2}[A-Z]{5}\d{4}[A-Z]\d[Z]\d\b",
-        upper_text,
+def _customer_name(text):
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    strict_addr_indicators = [
+        "ADDRESS", "GSTIN", "DATE", "INVOICE", "20B", "21B", "SIGNATURE", "SIGN", "SEAL", "RECEIVER",
+        "GROUND", "FLOOR", "D.NO", "H.NO", "PLOT", "FLAT", "APARTMENT", "RESIDENCY", "NEAR", "OPP", "BEHIND", "BESIDE"
+    ]
+    locality_indicators = [
+        "ROAD", "STREET", "NAGAR", "COLONY", "TEMPLE", "MARG", "LANE", "CROSS", "ENCLAVE",
+        "AVENUE", "LAYOUT", "SECTOR", "VILLAGE", "DISTRICT"
+    ]
+    comp_suffix_pattern = re.compile(
+        r"\b(?:HEALTH\s*CARE|HEALTHCARE|PHARMA(?:CY|CEUTICALS?)?|MEDICALS?|CLINIC|HOSPITAL|SURGICALS?|"
+        r"LABS?|DIAGNOSTICS?|ENTERPRISES?|LTD|PVT|LIMITED|CORP|INC|INDUSTRIES|AGENC(?:Y|IES)|SOLUTIONS|"
+        r"SYSTEMS|SERVICES|COMPANY|CO\b|LLP|PLC|GMBH|BROTHERS?|PARTNERS?|STORE|STORES)\b",
+        re.IGNORECASE,
     )
-    return match.group(0) if match else None
+
+    def _is_invalid_candidate(cand_str: str) -> bool:
+        if len(cand_str) < 3 or re.match(r"^\d+[-/]\d+", cand_str):
+            return True
+        c_up = cand_str.upper()
+        if any(k in c_up for k in ["CELL", "PHONE", "EMAIL", "DISTRIBUTOR", "PRODUCTS", "GSTIN", "20B", "21B", "SIGN", "ENTERPRISES"]):
+            return True
+        if any(k in c_up for k in strict_addr_indicators):
+            return True
+        if not comp_suffix_pattern.search(cand_str) and any(k in c_up for k in locality_indicators):
+            return True
+        return False
+
+    # 1. Preceding INVOICE NO in multi-column Indian layouts (e.g. SINGH NAGAR P N P HEALTH CARE / PRASANTHI PHARMACY)
+    for idx, line in enumerate(lines):
+        if line.upper() in ("INVOICE NO", "INVOICE NO:", "TAX INVOICE") and idx > 0:
+            cand = lines[idx - 1].strip(" :.-#")
+            cand_clean = re.sub(r"^(?:Mr\.?|Ms\.?|Mrs\.?|M/s\.?)\s+", "", cand, flags=re.IGNORECASE).strip()
+            if not _is_invalid_candidate(cand_clean):
+                return cand_clean
+
+    # 2. Anchor check: Client Name, Bill To, Billed To, Customer (not Customer Signature), Buyer, Messrs, M/s
+    m_cust = re.search(
+        r"\b(?:Client\s*Name|Bill\s*To|Billed\s*To|Customer(?!\s*['’]s?\s*Sign)|Buyer|Messrs|M/s)\b\s*[:.\-]?\s*([A-Za-z0-9\s&.,'()-]+)",
+        text,
+        re.IGNORECASE,
+    )
+    if m_cust:
+        cand = m_cust.group(1).splitlines()[0].strip(" :.-#")
+        cand_clean = re.sub(r"^(?:Name\s*[:.\-]?\s*|Mr\.?|Ms\.?|Mrs\.?|M/s\.?)\s*", "", cand, flags=re.IGNORECASE).strip()
+        if not _is_invalid_candidate(cand_clean):
+            return cand_clean
+
+    # 3. Pattern check: "To" anchor on its own line followed by recipient name
+    for idx, line in enumerate(lines):
+        if line.lower() in ("to", "to:") and idx + 1 < len(lines):
+            cand = lines[idx + 1].strip(" :.-#")
+            cand_clean = re.sub(r"^(?:Mr\.?|Ms\.?|Mrs\.?|M/s\.?)\s+", "", cand, flags=re.IGNORECASE).strip()
+            if not _is_invalid_candidate(cand_clean):
+                return cand_clean
+
+    return None
+
+
+def _gst_numbers(text):
+    upper_text = text.upper()
+    vendor_gst = None
+    customer_gst = None
+
+    # Split text into vendor block (before Client/Bill To/Buyer/To) and customer block
+    split_m = re.search(r"\b(?:Client\s*Name|Bill\s*To|Billed\s*To|Buyer|Customer|Consignee|To\b)\b", text, re.IGNORECASE)
+    if split_m:
+        vendor_block = text[:split_m.start()]
+        customer_block = text[split_m.start():]
+    else:
+        vendor_block = text
+        customer_block = ""
+
+    # 1. Vendor GST: look in vendor block first
+    m_v = re.search(r"\b(?:GSTIN|GST\s*NO|GSTIN\s*NO|GST)\s*[:.\-]?\s*([0-9A-Z]{10,15})\b", vendor_block, re.IGNORECASE)
+    if m_v:
+        vendor_gst = m_v.group(1).strip()
+    else:
+        v_gstins = re.findall(r"\b([0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1})\b", vendor_block.upper())
+        if v_gstins:
+            vendor_gst = v_gstins[0]
+
+    # 2. Customer GST: look in customer block
+    if customer_block:
+        m_c = re.search(r"\b(?:GSTIN|GST\s*NO|GSTIN\s*NO|GST)\s*[:.\-]?\s*([0-9A-Z]{10,15})\b", customer_block, re.IGNORECASE)
+        if m_c:
+            customer_gst = m_c.group(1).strip()
+        else:
+            c_gstins = re.findall(r"\b([0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1})\b", customer_block.upper())
+            if c_gstins:
+                customer_gst = c_gstins[0]
+
+    all_gstins = re.findall(r"\b([0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1})\b", upper_text)
+    if not vendor_gst and all_gstins:
+        vendor_gst = all_gstins[0]
+    if not customer_gst:
+        if len(all_gstins) > 1:
+            customer_gst = all_gstins[1]
+        elif all_gstins and vendor_gst and all_gstins[0] != vendor_gst:
+            customer_gst = all_gstins[0]
+
+    return vendor_gst, customer_gst
 
 
 def _reference_number(upper_text, labels):
+    bad_pat = re.compile(r"\b(?:AP/\d{2}/\d{2}/\d{4}-\d+|WLF\d{2}[A-Z]\d+|20B|21B|D\.?\s*NO|DOOR\s*NO|H\.?\s*NO|PLOT\s*NO)\b", re.IGNORECASE)
     for label in labels:
+        # Check on same line
         match = re.search(
             rf"{label}\s*[:.#]?\s*([A-Z0-9][A-Z0-9/-]{{1,30}})",
             upper_text,
         )
         if match:
-            return match.group(1)
+            cand = match.group(1).strip()
+            # Discard drug licenses, PAN, GSTIN, door numbers
+            if not bad_pat.search(cand) and not re.match(r"^[A-Z]{5}\d{4}[A-Z]$", cand):
+                if not re.match(r"^\d{4}[-/]\d{1,2}[-/]\d{1,2}$", cand):
+                    return cand
+
+        # Check on next line e.g. "INVOICE NO\nGSTSAL/996"
+        match_nl = re.search(
+            rf"{label}\s*[:.#]?\s*\n\s*([A-Z0-9][A-Z0-9/-]{{1,30}})",
+            upper_text,
+        )
+        if match_nl:
+            cand = match_nl.group(1).strip()
+            if not bad_pat.search(cand) and not re.match(r"^[A-Z]{5}\d{4}[A-Z]$", cand):
+                if not re.match(r"^\d{4}[-/]\d{1,2}[-/]\d{1,2}$", cand):
+                    return cand
     return None
 
 
@@ -328,6 +466,7 @@ def _currency(text):
 def extract_invoice_fields(text):
     upper_text = text.upper()
     vendor = _party_name(text)
+    customer = _customer_name(text)
     invoice_number = _reference_number(
         upper_text,
         [
@@ -337,18 +476,69 @@ def extract_invoice_fields(text):
         ],
     )
     invoice_date = _search_date(text)
-    gst_number = _gst_number(upper_text)
+    vendor_gst, customer_gst = _gst_numbers(text)
+
+    # Subtotal / Taxable amount
     subtotal = _search_amount(
         upper_text,
-        [r"SUB\s*TOTAL", r"TAXABLE\s*VALUE", r"TAXABLE\s*AMOUNT"],
+        [
+            r"TAXABLE\s*VALUE",
+            r"TAXABLE\s*AMOUNT",
+            r"TAXABLE\s*AMT",
+            r"GROSS\s*AMOUNT",
+            r"TOTAL\s*VALUE",
+            r"SUB\s*TOTAL",
+        ],
     )
-    tax_amount = _search_amount(
-        upper_text,
-        [r"TAX\s*AMOUNT", r"TOTAL\s*TAX", r"GST\s*AMOUNT", r"\bVAT\b"],
-    )
+
+    # Taxes
+    cgst_amount = None
+    sgst_amount = None
+    igst_amount = None
+
+    m_cgst = re.search(r"\bCGST\b[^\n\d]{0,40}?([0-9,]+\.[0-9]{2})", text, re.IGNORECASE)
+    if m_cgst:
+        cgst_amount = m_cgst.group(1).replace(",", "")
+    m_sgst = re.search(r"\bSGST\b[^\n\d]{0,40}?([0-9,]+\.[0-9]{2})", text, re.IGNORECASE)
+    if m_sgst:
+        sgst_amount = m_sgst.group(1).replace(",", "")
+    m_igst = re.search(r"\bIGST\b[^\n\d]{0,40}?([0-9,]+\.[0-9]{2})", text, re.IGNORECASE)
+    if m_igst:
+        igst_amount = m_igst.group(1).replace(",", "")
+
+    cgst_rate = None
+    sgst_rate = None
+    igst_rate = None
+    m_cgst_r = re.search(r"\bCGST\b[^\n\d]*?(\d+(?:\.\d+)?)\s*%", text, re.IGNORECASE)
+    if m_cgst_r:
+        cgst_rate = f"{m_cgst_r.group(1)}%"
+    m_sgst_r = re.search(r"\bSGST\b[^\n\d]*?(\d+(?:\.\d+)?)\s*%", text, re.IGNORECASE)
+    if m_sgst_r:
+        sgst_rate = f"{m_sgst_r.group(1)}%"
+    m_igst_r = re.search(r"\bIGST\b[^\n\d]*?(\d+(?:\.\d+)?)\s*%", text, re.IGNORECASE)
+    if m_igst_r:
+        igst_rate = f"{m_igst_r.group(1)}%"
+
+    # Total tax
+    tax_amount = None
+    if cgst_amount and sgst_amount:
+        try:
+            tax_amount = f"{float(cgst_amount) + float(sgst_amount):.2f}"
+        except ValueError:
+            pass
+    if not tax_amount and igst_amount:
+        tax_amount = igst_amount
+
+    if not tax_amount:
+        tax_amount = _search_amount(
+            upper_text,
+            [r"TOTAL\s*TAX", r"TAX\s*AMOUNT", r"GST\s*AMOUNT", r"\bVAT\b"],
+        )
+
     total_amount = _search_amount(
         upper_text,
         [
+            r"NET\s*AMOUNT",
             r"GRAND\s*TOTAL",
             r"TOTAL\s*AMOUNT",
             r"AMOUNT\s*PAYABLE",
@@ -358,30 +548,54 @@ def extract_invoice_fields(text):
             r"(?<!SUB)(?<!GRAND\s)TOTAL",
         ],
     )
+    if not total_amount:
+        m_net = re.search(
+            r"\b(?:NET\s*AMOUNT|TOTAL\s*AMOUNT|GRAND\s*TOTAL|AMOUNT\s*PAYABLE|NET\s*PAYABLE)\b\s*[:.\-]?\s*(?:[^\n\d]*\n)*?[^\n\d]*?([0-9,]+(?:\.[0-9]{2})?)",
+            upper_text,
+        )
+        if m_net:
+            total_amount = m_net.group(1).replace(",", "")
     currency = _currency(text)
 
     structured = {
         "vendor_name": _null_if_missing(vendor),
+        "customer_name": _null_if_missing(customer),
         "invoice_number": _null_if_missing(invoice_number),
         "invoice_date": _null_if_missing(invoice_date),
-        "gst_number": _null_if_missing(gst_number),
+        "gst_number": _null_if_missing(vendor_gst),
+        "customer_gstin": _null_if_missing(customer_gst),
         "subtotal": _null_if_missing(subtotal),
         "tax_amount": _null_if_missing(tax_amount),
+        "cgst_amount": _null_if_missing(cgst_amount),
+        "sgst_amount": _null_if_missing(sgst_amount),
+        "igst_amount": _null_if_missing(igst_amount),
         "total_amount": _null_if_missing(total_amount),
         "currency": _null_if_missing(currency),
+        "cgst_rate": _null_if_missing(cgst_rate),
+        "sgst_rate": _null_if_missing(sgst_rate),
+        "igst_rate": _null_if_missing(igst_rate),
     }
     invoice_fields = {
+        "vendor_name": _display(vendor),
         "company_name": _display(vendor),
-        "gst_number": _display(gst_number),
+        "customer_name": _display(customer),
+        "gst_number": _display(vendor_gst),
+        "customer_gstin": _display(customer_gst),
         "invoice_number": _display(invoice_number),
         "invoice_date": _display(invoice_date),
         "subtotal": _display(subtotal),
         "tax_amount": _display(tax_amount),
+        "cgst_amount": _display(cgst_amount),
+        "sgst_amount": _display(sgst_amount),
+        "igst_amount": _display(igst_amount),
+        "cgst_rate": _display(cgst_rate),
+        "sgst_rate": _display(sgst_rate),
+        "igst_rate": _display(igst_rate),
         "total_amount": _display(total_amount),
         "currency": _display(currency),
     }
     invoice_fields["confidence_score"] = coverage_score(
-        [invoice_fields[key] for key in INVOICE_FIELD_KEYS]
+        [invoice_fields[key] for key in INVOICE_FIELD_KEYS if key in invoice_fields]
     )
     invoice_fields["confidence_method"] = CONFIDENCE_METHOD
     return invoice_fields, structured

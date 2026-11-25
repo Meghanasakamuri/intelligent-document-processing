@@ -1,0 +1,139 @@
+{
+  "evaluation_title": "Baseline Extraction Evaluation: FATURA2 LayoutLMv3 on 31 Prashanti Invoices",
+  "model_name": "checkpoints/layoutlmv3-fatura2",
+  "total_invoices": 31,
+  "total_fields_evaluated": 341,
+  "overall_counts": {
+    "correct": 186,
+    "incorrect": 24,
+    "missing": 131,
+    "uncertain": 0
+  },
+  "overall_accuracy_pct": 54.5,
+  "overall_error_pct": 7.0,
+  "overall_missing_pct": 38.4,
+  "overall_uncertain_pct": 0.0,
+  "field_accuracy": {
+    "vendor_name": {
+      "correct": 0,
+      "incorrect": 23,
+      "missing": 8,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 74.2,
+      "missing_pct": 25.8,
+      "uncertain_pct": 0.0
+    },
+    "customer_name": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 31,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 100.0,
+      "uncertain_pct": 0.0
+    },
+    "invoice_number": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "invoice_date": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "subtotal": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 31,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 100.0,
+      "uncertain_pct": 0.0
+    },
+    "discount": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 31,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 100.0,
+      "uncertain_pct": 0.0
+    },
+    "cgst": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "sgst": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "total_tax": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "total_amount": {
+      "correct": 0,
+      "incorrect": 1,
+      "missing": 30,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 3.2,
+      "missing_pct": 96.8,
+      "uncertain_pct": 0.0
+    },
+    "gstin": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    }
+  },
+  "splits_customer_overlap": {
+    "train_invoices": 21,
+    "val_invoices": 5,
+    "test_invoices": 5,
+    "train_unique_customers": 14,
+    "val_unique_customers": 4,
+    "test_unique_customers": 4,
+    "overlap_train_val": [],
+    "overlap_train_test": [],
+    "overlap_val_test": []
+  }
+}

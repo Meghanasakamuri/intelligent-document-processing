@@ -1,0 +1,4302 @@
+[
+  {
+    "invoice_id": "Template44_Instance10",
+    "template": 44,
+    "processing_time": 1.376,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "25-Apr-1993",
+        "ground_truth": "9Y9M7d-259",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "identifier_mismatch (got '25-Apr-1993', expected '9Y9M7d-259')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1993-04-25",
+        "ground_truth": "1993-04-25",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "9.77",
+        "ground_truth": "9.77",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "0.31",
+        "ground_truth": "0.31",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "9.96",
+        "ground_truth": "9.96",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance110",
+    "template": 44,
+    "processing_time": 1.218,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "number security",
+        "ground_truth": null,
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "spurious_extraction"
+      },
+      "invoice_number": {
+        "extracted": "INv7BBesee",
+        "ground_truth": "INV78985661",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "identifier_mismatch (got 'INv7BBesee', expected 'INV78985661')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2018-07-10",
+        "ground_truth": "2018-07-10",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "463.56",
+        "ground_truth": "463.56",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "25.30",
+        "ground_truth": "25.30",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "482.23",
+        "ground_truth": "482.23",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance131",
+    "template": 44,
+    "processing_time": 1.359,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INV/73-68/404",
+        "ground_truth": "INV/73-68/404",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2014-02-15",
+        "ground_truth": "2014-02-15",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "1325.75",
+        "ground_truth": "1325.75",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "86.48",
+        "ground_truth": "86.48",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "1368.22",
+        "ground_truth": "1368.22",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance143",
+    "template": 44,
+    "processing_time": 1.3,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INV/38-07/590",
+        "ground_truth": "INV/38-07/590",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2016-01-05",
+        "ground_truth": "2016-01-05",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "468.69",
+        "ground_truth": "468.69",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "27.12",
+        "ground_truth": "27.12",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "488.40",
+        "ground_truth": "488.40",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance149",
+    "template": 44,
+    "processing_time": 1.32,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": null,
+        "ground_truth": "2624-065",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2020-02-23",
+        "ground_truth": "2020-02-23",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "878.16",
+        "ground_truth": "878.16",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "47.10",
+        "ground_truth": "47.10",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "911.39",
+        "ground_truth": "911.39",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance154",
+    "template": 44,
+    "processing_time": 1.45,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INV90238723",
+        "ground_truth": "INV90238723",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1999-10-24",
+        "ground_truth": "1999-10-24",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "503.27",
+        "ground_truth": "503.27",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "32.44",
+        "ground_truth": "32.44",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "535.71",
+        "ground_truth": "516.13",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 535.71, expected 516.13)"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance167",
+    "template": 44,
+    "processing_time": 15.681,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": null,
+        "ground_truth": "3Y3M4d-870",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2008-02-23",
+        "ground_truth": "2006-02-23",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "date_mismatch (got 2008-02-23, expected 2006-02-23)"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "367.97",
+        "ground_truth": "367.97",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "23.27",
+        "ground_truth": "23.27",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "376.96",
+        "ground_truth": "376.96",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template44_Instance169",
+    "template": 44,
+    "processing_time": 1.926,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Knight, Huffman and Moore",
+        "ground_truth": "Knight, Huffman and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INVS1696457",
+        "ground_truth": "INV51696457",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INVS1696457', expected 'INV51696457')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1998-10-06",
+        "ground_truth": "1998-10-06",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "534.96",
+        "ground_truth": "534.96",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "35.34",
+        "ground_truth": "28.23",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "amount_mismatch (got 35.34, expected 28.23)"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "555.59",
+        "ground_truth": "555.59",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance103",
+    "template": 45,
+    "processing_time": 1.991,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Barbara Phelps",
+        "ground_truth": "Barbara Phelps",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/35-61/437",
+        "ground_truth": "INV/35-61/437",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2009-10-19",
+        "ground_truth": "2009-10-19",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "300.89",
+        "ground_truth": "300.89",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance11",
+    "template": 45,
+    "processing_time": 1.541,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "samanda Gimore",
+        "ground_truth": "Amanda Gilmore",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "name_mismatch (got 'samanda Gimore', expected 'Amanda Gilmore')"
+      },
+      "invoice_number": {
+        "extracted": "INV/32-27/119",
+        "ground_truth": "INV/32-27/119",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2002-05-01",
+        "ground_truth": "2002-05-01",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "400.56",
+        "ground_truth": "400.56",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance114",
+    "template": 45,
+    "processing_time": 1.506,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Robert Ortiz",
+        "ground_truth": "Robert Ortiz",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV63666547",
+        "ground_truth": "INV63666547",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2022-04-26",
+        "ground_truth": "2022-04-26",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "283.77",
+        "ground_truth": "283.77",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance143",
+    "template": 45,
+    "processing_time": 1.348,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Samuel Walker DDS",
+        "ground_truth": "Samuel Walker DDS",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "7Y6M9d-347",
+        "ground_truth": "7Y6M9d-347",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2020-11-27",
+        "ground_truth": "2020-11-27",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "412.75",
+        "ground_truth": "412.75",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance149",
+    "template": 45,
+    "processing_time": 1.521,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Jamie Ramos",
+        "ground_truth": "Jamie Ramos",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/63-70/838",
+        "ground_truth": "INV/63-70/838",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2013-08-31",
+        "ground_truth": "2013-08-31",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "494.51",
+        "ground_truth": "494.51",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "EUR",
+        "is_match": false,
+        "source": "total_line_or_summary",
+        "reason": "mismatch (got 'USD', expected 'EUR')"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance167",
+    "template": 45,
+    "processing_time": 1.209,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Judith Gonzalez DDS",
+        "ground_truth": "Judith Gonzalez DDS",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "5599-479",
+        "ground_truth": "5599-479",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2011-03-02",
+        "ground_truth": "2011-03-02",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "546.14",
+        "ground_truth": "546.14",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template45_Instance172",
+    "template": 45,
+    "processing_time": 1.417,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Patton, Ortiz and Moore",
+        "ground_truth": "Patton, Ortiz and Moore",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Kenneth Murillo",
+        "ground_truth": "Kenneth Murillo",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INvo6369974",
+        "ground_truth": "INV06369974",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INvo6369974', expected 'INV06369974')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2006-09-03",
+        "ground_truth": "2006-09-03",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "663.11",
+        "ground_truth": "663.11",
+        "is_match": true,
+        "source": "localized_ocr_patch",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template46_Instance105",
+    "template": 46,
+    "processing_time": 1.396,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Hayley",
+        "ground_truth": "Morton-Leach",
+        "is_match": false,
+        "source": "derived",
+        "reason": "name_mismatch (got 'Hayley', expected 'Morton-Leach')"
+      },
+      "customer_name": {
+        "extracted": "Hayley Smith",
+        "ground_truth": "Hayley Smith",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV92184816",
+        "ground_truth": "INV92184816",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1993-07-07",
+        "ground_truth": "1993-07-07",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2000-03-11",
+        "ground_truth": "2000-03-11",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "549.70",
+        "ground_truth": "549.70",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "35.12",
+        "ground_truth": "35.12",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "549.70",
+        "ground_truth": "573.22",
+        "is_match": false,
+        "source": "localized_ocr_patch",
+        "reason": "amount_mismatch (got 549.7, expected 573.22)"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template46_Instance121",
+    "template": 46,
+    "processing_time": 1.232,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Morton-Leach",
+        "ground_truth": "Morton-Leach",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Jody Jones",
+        "ground_truth": "Jody Jones",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/09-70/201",
+        "ground_truth": "INV/09-70/201",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2010-05-07",
+        "ground_truth": "2010-05-07",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2009-05-31",
+        "ground_truth": "2009-05-31",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "816.25",
+        "ground_truth": "816.25",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "57.07",
+        "ground_truth": "57.07",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "849.24",
+        "ground_truth": "849.24",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template46_Instance136",
+    "template": 46,
+    "processing_time": 1.411,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Cheryl",
+        "ground_truth": "Morton-Leach",
+        "is_match": false,
+        "source": "derived",
+        "reason": "name_mismatch (got 'Cheryl', expected 'Morton-Leach')"
+      },
+      "customer_name": {
+        "extracted": "\u2018Cheryl Graham",
+        "ground_truth": "Cheryl Graham",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "normalized_name_match"
+      },
+      "invoice_number": {
+        "extracted": "INV31233425",
+        "ground_truth": "INV31233425",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2011-10-26",
+        "ground_truth": "2011-10-26",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2008-12-14",
+        "ground_truth": "2008-12-14",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "542.50",
+        "ground_truth": "542.50",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "37.45",
+        "ground_truth": "37.45",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "542.50",
+        "ground_truth": "561.45",
+        "is_match": false,
+        "source": "localized_ocr_patch",
+        "reason": "amount_mismatch (got 542.5, expected 561.45)"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "EUR",
+        "is_match": false,
+        "source": "total_line_or_summary",
+        "reason": "mismatch (got 'USD', expected 'EUR')"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template46_Instance140",
+    "template": 46,
+    "processing_time": 1.16,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Morton-Leach",
+        "ground_truth": "Morton-Leach",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "James Reed",
+        "ground_truth": "James Reed",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV70159215",
+        "ground_truth": "INV70159215",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1996-08-27",
+        "ground_truth": "1996-08-27",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2021-03-24",
+        "ground_truth": "2021-03-24",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "309.17",
+        "ground_truth": "309.17",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "14.29",
+        "ground_truth": "14.29",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "312.58",
+        "ground_truth": "312.58",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 2
+  },
+  {
+    "invoice_id": "Template46_Instance150",
+    "template": 46,
+    "processing_time": 1.243,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Morton-Leach",
+        "ground_truth": "Morton-Leach",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Alicia Sanchez",
+        "ground_truth": "Alicia Sanchez",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/91-03/413",
+        "ground_truth": "INV/91-03/413",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2017-03-20",
+        "ground_truth": "2017-03-20",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1998-04-04",
+        "ground_truth": "1998-04-04",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "361.30",
+        "ground_truth": "361.30",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "21.83",
+        "ground_truth": "21.83",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "373.52",
+        "ground_truth": "373.52",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template46_Instance151",
+    "template": 46,
+    "processing_time": 1.184,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Morton-Leach",
+        "ground_truth": "Morton-Leach",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Catherine",
+        "ground_truth": "Catherine Moody",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "name_substring_match"
+      },
+      "invoice_number": {
+        "extracted": "1Y3M6d-503",
+        "ground_truth": "1Y3M6d-503",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2008-06-06",
+        "ground_truth": "2008-06-06",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2003-11-26",
+        "ground_truth": "2003-11-26",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "388.94",
+        "ground_truth": "388.94",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "18.50",
+        "ground_truth": "18.50",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "399.39",
+        "ground_truth": "399.39",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template46_Instance170",
+    "template": 46,
+    "processing_time": 1.289,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Morton-Leach",
+        "ground_truth": "Morton-Leach",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Jacqueline",
+        "ground_truth": "Jacqueline Jensen",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "name_substring_match"
+      },
+      "invoice_number": {
+        "extracted": "INV53611328",
+        "ground_truth": "INV53611328",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2019-12-07",
+        "ground_truth": "2019-12-07",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2021-07-12",
+        "ground_truth": "2021-07-12",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "751.86",
+        "ground_truth": "751.86",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "27.06",
+        "ground_truth": "27.06",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "770.95",
+        "ground_truth": "770.95",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template47_Instance100",
+    "template": 47,
+    "processing_time": 1.304,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "8YOM1d-113",
+        "ground_truth": "8Y9M1d-113",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got '8YOM1d-113', expected '8Y9M1d-113')"
+      },
+      "po_number": {
+        "extracted": "70",
+        "ground_truth": "70",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2004-06-21",
+        "ground_truth": "2004-06-21",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2018-09-23",
+        "ground_truth": "2018-09-23",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "303.16",
+        "ground_truth": "303.16",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template47_Instance103",
+    "template": 47,
+    "processing_time": 1.299,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INV/02-22/070",
+        "ground_truth": "INV/02-22/070",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": "26",
+        "ground_truth": "26",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "1996-02-20",
+        "ground_truth": "1996-02-20",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1995-08-27",
+        "ground_truth": "1995-08-27",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "461.80",
+        "ground_truth": "461.80",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template47_Instance105",
+    "template": 47,
+    "processing_time": 1.3,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INV/46-25/4",
+        "ground_truth": "INV/46-25/413",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INV/46-25/4', expected 'INV/46-25/413')"
+      },
+      "po_number": {
+        "extracted": "73",
+        "ground_truth": "73",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2017-09-20",
+        "ground_truth": "2017-09-20",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": "2019-04-02",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "148.64",
+        "ground_truth": "148.64",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 2
+  },
+  {
+    "invoice_id": "Template47_Instance112",
+    "template": 47,
+    "processing_time": 1.382,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "1Y4Mad-507",
+        "ground_truth": "1Y4M8d-507",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got '1Y4Mad-507', expected '1Y4M8d-507')"
+      },
+      "po_number": {
+        "extracted": "59",
+        "ground_truth": "59",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2007-06-03",
+        "ground_truth": "2007-06-03",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1997-10-25",
+        "ground_truth": "1997-10-25",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "480.79",
+        "ground_truth": "480.79",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template47_Instance116",
+    "template": 47,
+    "processing_time": 1.257,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INVS7584674",
+        "ground_truth": "INV57584674",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INVS7584674', expected 'INV57584674')"
+      },
+      "po_number": {
+        "extracted": "95",
+        "ground_truth": "95",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2006-11-29",
+        "ground_truth": "2006-11-29",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1996-09-05",
+        "ground_truth": "1996-09-05",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "234.61",
+        "ground_truth": "234.61",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 2
+  },
+  {
+    "invoice_id": "Template47_Instance119",
+    "template": 47,
+    "processing_time": 1.393,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "4733-679",
+        "ground_truth": "4733-679",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": "80",
+        "ground_truth": "80",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2014-01-29",
+        "ground_truth": "2014-01-29",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2000-08-02",
+        "ground_truth": "2000-08-02",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "1119.41",
+        "ground_truth": "1119.41",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template47_Instance120",
+    "template": 47,
+    "processing_time": 1.333,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "6009-719",
+        "ground_truth": "6009-719",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": "42",
+        "ground_truth": "42",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2000-10-15",
+        "ground_truth": "2000-10-15",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2019-05-30",
+        "ground_truth": "2019-05-30",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "809.65",
+        "ground_truth": "809.65",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 4
+  },
+  {
+    "invoice_id": "Template47_Instance123",
+    "template": 47,
+    "processing_time": 1.388,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Rogers, Olson and Sanders",
+        "ground_truth": "Rogers, Olson and Sanders",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_number": {
+        "extracted": "INV/T3-47/611",
+        "ground_truth": "INV/73-47/611",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INV/T3-47/611', expected 'INV/73-47/611')"
+      },
+      "po_number": {
+        "extracted": "15",
+        "ground_truth": "15",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "invoice_date": {
+        "extracted": "2006-04-27",
+        "ground_truth": "2006-04-27",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2000-02-01",
+        "ground_truth": "2000-02-01",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "717.13",
+        "ground_truth": "717.13",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template48_Instance110",
+    "template": 48,
+    "processing_time": 1.365,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "\u2018Jennifer Sweeney",
+        "ground_truth": "Jennifer Sweeney",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "normalized_name_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/N1-81/718",
+        "ground_truth": "INV/11-81/718",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INV/N1-81/718', expected 'INV/11-81/718')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1993-05-02",
+        "ground_truth": "1993-05-02",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2021-03-09",
+        "ground_truth": "2021-03-09",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "1443.03",
+        "ground_truth": "1443.03",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "129.87",
+        "ground_truth": "129.87",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "487.45",
+        "ground_truth": "1487.45",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "amount_mismatch (got 487.45, expected 1487.45)"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 5
+  },
+  {
+    "invoice_id": "Template48_Instance120",
+    "template": 48,
+    "processing_time": 1.413,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Jennifer Robinson",
+        "ground_truth": "Jennifer Robinson",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "2Y6M7d-581",
+        "ground_truth": "2Y6M7d-581",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2008-07-01",
+        "ground_truth": "2008-07-01",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2011-04-04",
+        "ground_truth": "2011-04-04",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "821.57",
+        "ground_truth": "821.57",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "73.94",
+        "ground_truth": "73.94",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "895.51",
+        "ground_truth": "807.87",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 895.51, expected 807.87)"
+      },
+      "currency": {
+        "extracted": "INR",
+        "ground_truth": "EUR",
+        "is_match": false,
+        "source": "total_line_or_summary",
+        "reason": "mismatch (got 'INR', expected 'EUR')"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 5
+  },
+  {
+    "invoice_id": "Template48_Instance147",
+    "template": 48,
+    "processing_time": 1.423,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Angel Sanders",
+        "ground_truth": "Angel Sanders",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "1Y3M2d-837",
+        "ground_truth": "1Y3M2d-837",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2012-07-21",
+        "ground_truth": "2012-07-21",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1995-04-05",
+        "ground_truth": "1995-04-05",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "569.25",
+        "ground_truth": "569.25",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "51.23",
+        "ground_truth": "51.23",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "620.48",
+        "ground_truth": "565.08",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 620.48, expected 565.08)"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 5
+  },
+  {
+    "invoice_id": "Template48_Instance159",
+    "template": 48,
+    "processing_time": 1.36,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Whitney Mayo",
+        "ground_truth": "Whitney Mayo",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "8359-443",
+        "ground_truth": "8359-443",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2022-04-05",
+        "ground_truth": "2022-04-05",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1996-04-24",
+        "ground_truth": "1996-04-24",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "478.72",
+        "ground_truth": "478.72",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "43.08",
+        "ground_truth": "43.08",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "521.80",
+        "ground_truth": "488.38",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 521.8, expected 488.38)"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 4
+  },
+  {
+    "invoice_id": "Template48_Instance176",
+    "template": 48,
+    "processing_time": 1.32,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Amy Walker",
+        "ground_truth": "Amy Walker",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/21-64/623",
+        "ground_truth": "INV/21-64/623",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2016-06-11",
+        "ground_truth": "2016-06-11",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1997-12-14",
+        "ground_truth": "1997-12-14",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "98.81",
+        "ground_truth": "108.79",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 98.81, expected 108.79)"
+      },
+      "tax_amount": {
+        "extracted": "9.79",
+        "ground_truth": "9.79",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "108.60",
+        "ground_truth": "108.60",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template48_Instance188",
+    "template": 48,
+    "processing_time": 1.409,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Dr, Diane Rodriguez DDS",
+        "ground_truth": "Dr. Diane Rodriguez DDS",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "normalized_name_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/48-201814",
+        "ground_truth": "INV/48-30/814",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got 'INV/48-201814', expected 'INV/48-30/814')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2008-12-27",
+        "ground_truth": "2006-12-27",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "date_mismatch (got 2008-12-27, expected 2006-12-27)"
+      },
+      "due_date": {
+        "extracted": "2014-04-18",
+        "ground_truth": "2014-04-18",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "156.02",
+        "ground_truth": "480.60",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 156.02, expected 480.6)"
+      },
+      "tax_amount": {
+        "extracted": "43.25",
+        "ground_truth": "43.25",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "199.27",
+        "ground_truth": "499.27",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "amount_mismatch (got 199.27, expected 499.27)"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template48_Instance20",
+    "template": 48,
+    "processing_time": 1.415,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Brooks LLC",
+        "ground_truth": "Brooks LLC",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Kristin Vazquez",
+        "ground_truth": "Kristin Vazquez",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "4YoM5d-608",
+        "ground_truth": "4Y9M5d-608",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got '4YoM5d-608', expected '4Y9M5d-608')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2016-09-17",
+        "ground_truth": "2016-09-17",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2012-02-02",
+        "ground_truth": "2012-02-02",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "1053.52",
+        "ground_truth": "1053.52",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "94.82",
+        "ground_truth": "94.82",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "1065.72",
+        "ground_truth": "1065.72",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 5
+  },
+  {
+    "invoice_id": "Template49_Instance0",
+    "template": 49,
+    "processing_time": 1.561,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": null,
+        "ground_truth": "Jessica Acevedo",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "model_prediction_or_mapping"
+      },
+      "invoice_number": {
+        "extracted": "INV/65-23/967",
+        "ground_truth": "INV/65-23/967",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2002-08-27",
+        "ground_truth": "2002-08-27",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "1242.79",
+        "ground_truth": "1242.79",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "1262.37",
+        "ground_truth": "1262.37",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template49_Instance126",
+    "template": 49,
+    "processing_time": 1.231,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "\u2018Jenna Megee",
+        "ground_truth": "Jenna Mcgee",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "name_mismatch (got '\u2018Jenna Megee', expected 'Jenna Mcgee')"
+      },
+      "invoice_number": {
+        "extracted": "S47",
+        "ground_truth": "3Y3M7d-947",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "identifier_mismatch (got 'S47', expected '3Y3M7d-947')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2000-11-02",
+        "ground_truth": "2000-11-02",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "35.38",
+        "ground_truth": "35.38",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "35.65",
+        "ground_truth": "35.65",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template49_Instance13",
+    "template": 49,
+    "processing_time": 1.372,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Melissa Carrillo DDS",
+        "ground_truth": "Melissa Carrillo DDS",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "INV/bs-Se/105",
+        "ground_truth": "INV/95-88/105",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "identifier_mismatch (got 'INV/bs-Se/105', expected 'INV/95-88/105')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2020-10-22",
+        "ground_truth": "2020-10-22",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "322.54",
+        "ground_truth": "322.54",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "322.26",
+        "ground_truth": "322.26",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template49_Instance131",
+    "template": 49,
+    "processing_time": 1.356,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Nancy Ramirez",
+        "ground_truth": "Nancy Ramirez",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "27-Jul-2014",
+        "ground_truth": "3358-110",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "identifier_mismatch (got '27-Jul-2014', expected '3358-110')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2014-07-27",
+        "ground_truth": "2014-07-27",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "521.87",
+        "ground_truth": "521.87",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "528.39",
+        "ground_truth": "528.39",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template49_Instance132",
+    "template": 49,
+    "processing_time": 1.399,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Zachary Anderson",
+        "ground_truth": "Zachary Anderson",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "ce0zse",
+        "ground_truth": "6602-333",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "identifier_mismatch (got 'ce0zse', expected '6602-333')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2022-06-06",
+        "ground_truth": "2022-06-06",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "499.56",
+        "ground_truth": "499.56",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "507.77",
+        "ground_truth": "507.77",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template49_Instance134",
+    "template": 49,
+    "processing_time": 1.35,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Mr. Steven Garcia",
+        "ground_truth": "Mr. Steven Garcia",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": null,
+        "ground_truth": "8032-248",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": null,
+        "ground_truth": "2022-03-04",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "1189.62",
+        "ground_truth": "1189.62",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "1211.44",
+        "ground_truth": "1211.44",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template49_Instance145",
+    "template": 49,
+    "processing_time": 1.364,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Robinson-Carson",
+        "ground_truth": "Robinson-Carson",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "rJennifer Lawson",
+        "ground_truth": "Jennifer Lawson",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "name_substring_match"
+      },
+      "invoice_number": {
+        "extracted": "4024-45",
+        "ground_truth": "4024-345",
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "identifier_mismatch (got '4024-45', expected '4024-345')"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1999-10-23",
+        "ground_truth": "1999-10-23",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "subtotal": {
+        "extracted": "675.48",
+        "ground_truth": "675.48",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "total_amount": {
+        "extracted": "671.51",
+        "ground_truth": "671.51",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template50_Instance123",
+    "template": 50,
+    "processing_time": 1.378,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Stein-Fernandez",
+        "ground_truth": "Stein-Fernandez",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Zachary Moody",
+        "ground_truth": "Zachary Moody",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "Tel: 4(116)505-3714",
+        "ground_truth": null,
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "spurious_extraction"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2016-02-20",
+        "ground_truth": "2016-02-20",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2011-02-16",
+        "ground_truth": "2011-02-16",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "361.24",
+        "ground_truth": "361.24",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "17.64",
+        "ground_truth": "17.64",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": "11.38",
+        "ground_truth": "11.38",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "total_amount": {
+        "extracted": "370.50",
+        "ground_truth": "370.50",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template50_Instance135",
+    "template": 50,
+    "processing_time": 1.478,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Stein-Fernandez",
+        "ground_truth": "Stein-Fernandez",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "lenses Conenles",
+        "ground_truth": "Michael Gonzalez",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "name_mismatch (got 'lenses Conenles', expected 'Michael Gonzalez')"
+      },
+      "invoice_number": {
+        "extracted": "09-May-1999",
+        "ground_truth": null,
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "spurious_extraction"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "1999-05-09",
+        "ground_truth": "1999-05-09",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "2006-12-12",
+        "ground_truth": "2006-12-12",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "618.89",
+        "ground_truth": "618.83",
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "amount_mismatch (got 618.89, expected 618.83)"
+      },
+      "tax_amount": {
+        "extracted": "35.70",
+        "ground_truth": "35.70",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": "17.7",
+        "ground_truth": "17.7",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "total_amount": {
+        "extracted": "634.91",
+        "ground_truth": "634.91",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "EUR",
+        "ground_truth": "EUR",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template50_Instance144",
+    "template": 50,
+    "processing_time": 1.437,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Stein-Fernandez",
+        "ground_truth": "Stein-Fernandez",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Robin Brooks",
+        "ground_truth": "Robin Brooks",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "53",
+        "ground_truth": null,
+        "is_match": false,
+        "source": "spatial_anchor",
+        "reason": "spurious_extraction"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2001-08-24",
+        "ground_truth": "2001-08-24",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1996-09-13",
+        "ground_truth": "1996-09-13",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "568.25",
+        "ground_truth": "568.25",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "37.42",
+        "ground_truth": "37.42",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": "18.98",
+        "ground_truth": "18.98",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "total_amount": {
+        "extracted": "581.58",
+        "ground_truth": "581.58",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 0
+  },
+  {
+    "invoice_id": "Template50_Instance179",
+    "template": 50,
+    "processing_time": 1.515,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Stein-Fernandez",
+        "ground_truth": "Stein-Fernandez",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Maria Cook",
+        "ground_truth": "Maria Cook",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": "Tel: +(036)235-5961",
+        "ground_truth": null,
+        "is_match": false,
+        "source": "token_classification",
+        "reason": "spurious_extraction"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": "2012-11-11",
+        "ground_truth": "2012-11-11",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "due_date": {
+        "extracted": "1999-03-15",
+        "ground_truth": "1999-03-15",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "242.41",
+        "ground_truth": "242.41",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "12.38",
+        "ground_truth": "12.38",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": "4.99",
+        "ground_truth": "4.99",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "total_amount": {
+        "extracted": "251.81",
+        "ground_truth": "251.81",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": true,
+    "line_items_count": 3
+  },
+  {
+    "invoice_id": "Template50_Instance193",
+    "template": 50,
+    "processing_time": 1.426,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Stein-Fernandez",
+        "ground_truth": "Stein-Fernandez",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Jamie Smith",
+        "ground_truth": "Jamie Smith",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": null,
+        "ground_truth": "2005-08-24",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "due_date": {
+        "extracted": "2008-03-29",
+        "ground_truth": "2008-03-29",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "985.98",
+        "ground_truth": "1028.78",
+        "is_match": false,
+        "source": "derived",
+        "reason": "amount_mismatch (got 985.98, expected 1028.78)"
+      },
+      "tax_amount": {
+        "extracted": "69.88",
+        "ground_truth": "69.88",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": null,
+        "ground_truth": "32.0",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "total_amount": {
+        "extracted": "1055.86",
+        "ground_truth": "1055.86",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 5
+  },
+  {
+    "invoice_id": "Template50_Instance20",
+    "template": 50,
+    "processing_time": 1.401,
+    "fields": {
+      "vendor_name": {
+        "extracted": "Stein-Fernandez",
+        "ground_truth": "Stein-Fernandez",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "customer_name": {
+        "extracted": "Johnny Espinoza",
+        "ground_truth": "Johnny Espinoza",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "invoice_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "po_number": {
+        "extracted": null,
+        "ground_truth": null,
+        "is_match": true,
+        "source": "unknown",
+        "reason": "both_none"
+      },
+      "invoice_date": {
+        "extracted": null,
+        "ground_truth": "2018-11-28",
+        "is_match": false,
+        "source": "unknown",
+        "reason": "ocr_missing"
+      },
+      "due_date": {
+        "extracted": "2022-03-16",
+        "ground_truth": "2022-03-16",
+        "is_match": true,
+        "source": "token_classification",
+        "reason": "exact_match"
+      },
+      "subtotal": {
+        "extracted": "769.36",
+        "ground_truth": "769.36",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "tax_amount": {
+        "extracted": "40.93",
+        "ground_truth": "40.93",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "discount": {
+        "extracted": "28.39",
+        "ground_truth": "28.39",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "total_amount": {
+        "extracted": "801.21",
+        "ground_truth": "801.21",
+        "is_match": true,
+        "source": "spatial_anchor",
+        "reason": "exact_match"
+      },
+      "currency": {
+        "extracted": "USD",
+        "ground_truth": "USD",
+        "is_match": true,
+        "source": "total_line_or_summary",
+        "reason": "exact_match"
+      }
+    },
+    "all_fields_correct": false,
+    "line_items_count": 4
+  }
+]

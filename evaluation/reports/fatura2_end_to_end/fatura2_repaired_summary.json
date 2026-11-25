@@ -1,0 +1,223 @@
+{
+  "evaluation_tag": "repaired",
+  "total_invoices": 50,
+  "total_time_seconds": 83.96,
+  "avg_time_per_invoice": 1.679,
+  "ocr_word_recall_pct": 85.28,
+  "ocr_word_precision_pct": 82.48,
+  "complete_invoice_exact_match_pct": 34.0,
+  "total_line_items_extracted": 67,
+  "avg_line_items_per_invoice": 1.34,
+  "field_accuracies": {
+    "vendor_name": {
+      "support": 50,
+      "correct": 48,
+      "missing": 0,
+      "incorrect": 2,
+      "accuracy_pct": 96.0,
+      "direct_correct": 48,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "name_mismatch (got 'Hayley', expected 'Morton-Leach')": 1,
+        "name_mismatch (got 'Cheryl', expected 'Morton-Leach')": 1
+      }
+    },
+    "customer_name": {
+      "support": 34,
+      "correct": 30,
+      "missing": 1,
+      "incorrect": 3,
+      "accuracy_pct": 88.24,
+      "direct_correct": 30,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "name_mismatch (got 'samanda Gimore', expected 'Amanda Gilmore')": 1,
+        "model_prediction_or_mapping": 1,
+        "name_mismatch (got '\u2018Jenna Megee', expected 'Jenna Mcgee')": 1,
+        "name_mismatch (got 'lenses Conenles', expected 'Michael Gonzalez')": 1
+      }
+    },
+    "invoice_number": {
+      "support": 44,
+      "correct": 24,
+      "missing": 3,
+      "incorrect": 17,
+      "accuracy_pct": 54.55,
+      "direct_correct": 24,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "identifier_mismatch (got '25-Apr-1993', expected '9Y9M7d-259')": 1,
+        "identifier_mismatch (got 'INv7BBesee', expected 'INV78985661')": 1,
+        "ocr_missing": 3,
+        "identifier_mismatch (got 'INVS1696457', expected 'INV51696457')": 1,
+        "identifier_mismatch (got 'INvo6369974', expected 'INV06369974')": 1,
+        "identifier_mismatch (got '8YOM1d-113', expected '8Y9M1d-113')": 1,
+        "identifier_mismatch (got 'INV/46-25/4', expected 'INV/46-25/413')": 1,
+        "identifier_mismatch (got '1Y4Mad-507', expected '1Y4M8d-507')": 1,
+        "identifier_mismatch (got 'INVS7584674', expected 'INV57584674')": 1,
+        "identifier_mismatch (got 'INV/T3-47/611', expected 'INV/73-47/611')": 1,
+        "identifier_mismatch (got 'INV/N1-81/718', expected 'INV/11-81/718')": 1,
+        "identifier_mismatch (got 'INV/48-201814', expected 'INV/48-30/814')": 1,
+        "identifier_mismatch (got '4YoM5d-608', expected '4Y9M5d-608')": 1,
+        "identifier_mismatch (got 'S47', expected '3Y3M7d-947')": 1,
+        "identifier_mismatch (got 'INV/bs-Se/105', expected 'INV/95-88/105')": 1,
+        "identifier_mismatch (got '27-Jul-2014', expected '3358-110')": 1,
+        "identifier_mismatch (got 'ce0zse', expected '6602-333')": 1,
+        "identifier_mismatch (got '4024-45', expected '4024-345')": 1
+      }
+    },
+    "po_number": {
+      "support": 8,
+      "correct": 8,
+      "missing": 0,
+      "incorrect": 0,
+      "accuracy_pct": 100.0,
+      "direct_correct": 8,
+      "derived_correct": 0,
+      "failure_reasons": {}
+    },
+    "invoice_date": {
+      "support": 50,
+      "correct": 45,
+      "missing": 3,
+      "incorrect": 2,
+      "accuracy_pct": 90.0,
+      "direct_correct": 45,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "date_mismatch (got 2008-02-23, expected 2006-02-23)": 1,
+        "date_mismatch (got 2008-12-27, expected 2006-12-27)": 1,
+        "ocr_missing": 3
+      }
+    },
+    "due_date": {
+      "support": 28,
+      "correct": 27,
+      "missing": 1,
+      "incorrect": 0,
+      "accuracy_pct": 96.43,
+      "direct_correct": 27,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "ocr_missing": 1
+      }
+    },
+    "subtotal": {
+      "support": 35,
+      "correct": 31,
+      "missing": 0,
+      "incorrect": 4,
+      "accuracy_pct": 88.57,
+      "direct_correct": 31,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "amount_mismatch (got 98.81, expected 108.79)": 1,
+        "amount_mismatch (got 156.02, expected 480.6)": 1,
+        "amount_mismatch (got 618.89, expected 618.83)": 1,
+        "amount_mismatch (got 985.98, expected 1028.78)": 1
+      }
+    },
+    "tax_amount": {
+      "support": 28,
+      "correct": 27,
+      "missing": 0,
+      "incorrect": 1,
+      "accuracy_pct": 96.43,
+      "direct_correct": 27,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "amount_mismatch (got 35.34, expected 28.23)": 1
+      }
+    },
+    "discount": {
+      "support": 6,
+      "correct": 5,
+      "missing": 1,
+      "incorrect": 0,
+      "accuracy_pct": 83.33,
+      "direct_correct": 5,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "ocr_missing": 1
+      }
+    },
+    "total_amount": {
+      "support": 50,
+      "correct": 42,
+      "missing": 0,
+      "incorrect": 8,
+      "accuracy_pct": 84.0,
+      "direct_correct": 42,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "amount_mismatch (got 535.71, expected 516.13)": 1,
+        "amount_mismatch (got 549.7, expected 573.22)": 1,
+        "amount_mismatch (got 542.5, expected 561.45)": 1,
+        "amount_mismatch (got 487.45, expected 1487.45)": 1,
+        "amount_mismatch (got 895.51, expected 807.87)": 1,
+        "amount_mismatch (got 620.48, expected 565.08)": 1,
+        "amount_mismatch (got 521.8, expected 488.38)": 1,
+        "amount_mismatch (got 199.27, expected 499.27)": 1
+      }
+    },
+    "currency": {
+      "support": 50,
+      "correct": 47,
+      "missing": 0,
+      "incorrect": 3,
+      "accuracy_pct": 94.0,
+      "direct_correct": 47,
+      "derived_correct": 0,
+      "failure_reasons": {
+        "mismatch (got 'USD', expected 'EUR')": 2,
+        "mismatch (got 'INR', expected 'EUR')": 1
+      }
+    }
+  },
+  "error_root_causes": {
+    "missing_invoice_number:ocr_missing": 3,
+    "missing_invoice_date:ocr_missing": 3,
+    "incorrect_currency:mismatch (got 'USD', expected 'EUR')": 2,
+    "incorrect_invoice_number:identifier_mismatch (got '25-Apr-1993', expected '9Y9M7d-259')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INv7BBesee', expected 'INV78985661')": 1,
+    "incorrect_total_amount:amount_mismatch (got 535.71, expected 516.13)": 1,
+    "incorrect_invoice_date:date_mismatch (got 2008-02-23, expected 2006-02-23)": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INVS1696457', expected 'INV51696457')": 1,
+    "incorrect_tax_amount:amount_mismatch (got 35.34, expected 28.23)": 1,
+    "incorrect_customer_name:name_mismatch (got 'samanda Gimore', expected 'Amanda Gilmore')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INvo6369974', expected 'INV06369974')": 1,
+    "incorrect_vendor_name:name_mismatch (got 'Hayley', expected 'Morton-Leach')": 1,
+    "incorrect_total_amount:amount_mismatch (got 549.7, expected 573.22)": 1,
+    "incorrect_vendor_name:name_mismatch (got 'Cheryl', expected 'Morton-Leach')": 1,
+    "incorrect_total_amount:amount_mismatch (got 542.5, expected 561.45)": 1,
+    "incorrect_invoice_number:identifier_mismatch (got '8YOM1d-113', expected '8Y9M1d-113')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INV/46-25/4', expected 'INV/46-25/413')": 1,
+    "missing_due_date:ocr_missing": 1,
+    "incorrect_invoice_number:identifier_mismatch (got '1Y4Mad-507', expected '1Y4M8d-507')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INVS7584674', expected 'INV57584674')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INV/T3-47/611', expected 'INV/73-47/611')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INV/N1-81/718', expected 'INV/11-81/718')": 1,
+    "incorrect_total_amount:amount_mismatch (got 487.45, expected 1487.45)": 1,
+    "incorrect_total_amount:amount_mismatch (got 895.51, expected 807.87)": 1,
+    "incorrect_currency:mismatch (got 'INR', expected 'EUR')": 1,
+    "incorrect_total_amount:amount_mismatch (got 620.48, expected 565.08)": 1,
+    "incorrect_total_amount:amount_mismatch (got 521.8, expected 488.38)": 1,
+    "incorrect_subtotal:amount_mismatch (got 98.81, expected 108.79)": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INV/48-201814', expected 'INV/48-30/814')": 1,
+    "incorrect_invoice_date:date_mismatch (got 2008-12-27, expected 2006-12-27)": 1,
+    "incorrect_subtotal:amount_mismatch (got 156.02, expected 480.6)": 1,
+    "incorrect_total_amount:amount_mismatch (got 199.27, expected 499.27)": 1,
+    "incorrect_invoice_number:identifier_mismatch (got '4YoM5d-608', expected '4Y9M5d-608')": 1,
+    "missing_customer_name:model_prediction_or_mapping": 1,
+    "incorrect_customer_name:name_mismatch (got '\u2018Jenna Megee', expected 'Jenna Mcgee')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'S47', expected '3Y3M7d-947')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'INV/bs-Se/105', expected 'INV/95-88/105')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got '27-Jul-2014', expected '3358-110')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got 'ce0zse', expected '6602-333')": 1,
+    "incorrect_invoice_number:identifier_mismatch (got '4024-45', expected '4024-345')": 1,
+    "incorrect_customer_name:name_mismatch (got 'lenses Conenles', expected 'Michael Gonzalez')": 1,
+    "incorrect_subtotal:amount_mismatch (got 618.89, expected 618.83)": 1,
+    "incorrect_subtotal:amount_mismatch (got 985.98, expected 1028.78)": 1,
+    "missing_discount:ocr_missing": 1
+  }
+}

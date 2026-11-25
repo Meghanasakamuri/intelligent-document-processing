@@ -6,21 +6,12 @@ for PostgreSQL without changing the API routes. Placeholders use SQLite's
 """
 
 import json
-import os
+import logging
 import sqlite3
-from pathlib import Path
 
+from app.config import DATA_DIR, DATABASE_PATH, UPLOAD_DIR  # noqa: F401
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = Path(
-    os.environ.get("IDP_DATA_DIR", str(BASE_DIR / "data"))
-)
-UPLOAD_DIR = Path(
-    os.environ.get("IDP_UPLOAD_DIR", str(BASE_DIR / "uploads"))
-)
-DATABASE_PATH = Path(
-    os.environ.get("IDP_DATABASE_PATH", str(DATA_DIR / "documents.db"))
-)
+logger = logging.getLogger(__name__)
 
 
 def _connect():
@@ -56,10 +47,51 @@ def init_db():
                 page_count INTEGER,
                 pages_processed INTEGER,
                 text_source TEXT,
-                message TEXT
+                message TEXT,
+                layoutlm_fields TEXT,
+                layoutlm_confidence TEXT,
+                extraction_method TEXT DEFAULT 'baseline',
+                line_items TEXT,
+                validation_results TEXT
             )
             """
         )
+        # Audit trail for human-in-the-loop verification
+        connection.execute(
+            """
+            CREATE TABLE IF NOT EXISTS audit_log (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                document_id TEXT NOT NULL,
+                field_name TEXT NOT NULL,
+                old_value TEXT,
+                new_value TEXT,
+                confidence REAL,
+                action TEXT NOT NULL DEFAULT 'edit',
+                timestamp TEXT NOT NULL,
+                FOREIGN KEY (document_id) REFERENCES documents(id)
+            )
+            """
+        )
+        connection.execute(
+            "CREATE INDEX IF NOT EXISTS idx_audit_doc_id ON audit_log (document_id)"
+        )
+
+        # Non-destructive idempotent migrations for existing SQLite databases
+        cursor = connection.execute("PRAGMA table_info(documents)")
+        existing_cols = {row["name"] for row in cursor.fetchall()}
+
+        for col, col_type in [
+            ("layoutlm_fields", "TEXT"),
+            ("layoutlm_confidence", "TEXT"),
+            ("extraction_method", "TEXT DEFAULT 'baseline'"),
+            ("line_items", "TEXT"),
+            ("validation_results", "TEXT"),
+        ]:
+            if col not in existing_cols:
+                try:
+                    connection.execute(f"ALTER TABLE documents ADD COLUMN {col} {col_type}")
+                except sqlite3.OperationalError:
+                    pass  # column already exists or locked
 
 
 def _loads(value, fallback):
@@ -75,9 +107,35 @@ def row_to_document(row, include_text=True):
     if row is None:
         return None
 
+    keys = row.keys() if hasattr(row, "keys") else []
     text = row["ocr_text"] or ""
     invoice_fields = _loads(row["invoice_fields"], {})
     extracted_fields = _loads(row["extracted_fields"], {})
+    layoutlm_fields = (
+        _loads(row["layoutlm_fields"], None)
+        if "layoutlm_fields" in keys
+        else None
+    )
+    layoutlm_confidence = (
+        _loads(row["layoutlm_confidence"], None)
+        if "layoutlm_confidence" in keys
+        else None
+    )
+    extraction_method = (
+        row["extraction_method"]
+        if "extraction_method" in keys and row["extraction_method"]
+        else "baseline"
+    )
+    line_items = (
+        _loads(row["line_items"], [])
+        if "line_items" in keys and row["line_items"]
+        else []
+    )
+    validation_results = (
+        _loads(row["validation_results"], None)
+        if "validation_results" in keys and row["validation_results"]
+        else None
+    )
 
     document = {
         "id": row["id"],
@@ -89,6 +147,11 @@ def row_to_document(row, include_text=True):
         "processing_status": row["processing_status"],
         "extracted_fields": extracted_fields,
         "invoice_fields": invoice_fields,
+        "layoutlm_fields": layoutlm_fields,
+        "layoutlm_confidence": layoutlm_confidence,
+        "extraction_method": extraction_method,
+        "line_items": line_items,
+        "validation_results": validation_results,
         "confidence_score": row["confidence_score"],
         "confidence_method": row["confidence_method"],
         "model_confidence": None,
@@ -100,7 +163,7 @@ def row_to_document(row, include_text=True):
         "pages_processed": row["pages_processed"],
         "text_source": row["text_source"],
         "message": row["message"],
-        "ai_model": None,
+        "ai_model": "LayoutLMv3" if extraction_method == "layoutlm" else None,
     }
 
     if include_text:
@@ -374,3 +437,108 @@ def labeled_documents():
             }
         )
     return labeled
+
+
+def insert_audit_entry(
+    document_id: str,
+    field_name: str,
+    old_value: str | None = None,
+    new_value: str | None = None,
+    confidence: float | None = None,
+    action: str = "edit",
+    timestamp: str | None = None,
+) -> int:
+    """Record an audit trail entry for human-in-the-loop verification."""
+    from datetime import datetime, timezone
+    ts = timestamp or datetime.now(timezone.utc).isoformat()
+    with _connect() as connection:
+        cursor = connection.execute(
+            """
+            INSERT INTO audit_log (
+                document_id, field_name, old_value, new_value,
+                confidence, action, timestamp
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                document_id,
+                str(field_name),
+                str(old_value) if old_value is not None else None,
+                str(new_value) if new_value is not None else None,
+                confidence,
+                action,
+                ts,
+            ),
+        )
+        return cursor.lastrowid
+
+
+def get_audit_log(document_id: str) -> list[dict]:
+    """Retrieve audit log history for a specific document."""
+    with _connect() as connection:
+        rows = connection.execute(
+            """
+            SELECT id, document_id, field_name, old_value, new_value,
+                   confidence, action, timestamp
+            FROM audit_log
+            WHERE document_id = ?
+            ORDER BY timestamp DESC, id DESC
+            """,
+            (document_id,),
+        ).fetchall()
+    return [dict(row) for row in rows]
+
+
+def get_all_audit_entries(limit: int = 100, offset: int = 0) -> list[dict]:
+    """Retrieve system-wide recent audit history."""
+    with _connect() as connection:
+        rows = connection.execute(
+            """
+            SELECT a.*, d.original_filename as filename
+            FROM audit_log a
+            LEFT JOIN documents d ON a.document_id = d.id
+            ORDER BY a.timestamp DESC
+            LIMIT ? OFFSET ?
+            """,
+            (limit, offset),
+        ).fetchall()
+    return [dict(row) for row in rows]
+
+
+def update_extraction_method(
+    document_id: str,
+    method: str,
+    layoutlm_fields: dict | None = None,
+    layoutlm_confidence: dict | None = None,
+    confidence_score: float | None = None,
+    confidence_method: str | None = None,
+    line_items: list[dict] | None = None,
+    validation_results: dict | None = None,
+) -> bool:
+    """Store LayoutLMv3 extraction results alongside baseline results."""
+    with _connect() as connection:
+        sets = ["extraction_method = ?", "layoutlm_fields = ?", "layoutlm_confidence = ?"]
+        params = [
+            method,
+            json.dumps(layoutlm_fields or {}),
+            json.dumps(layoutlm_confidence or {}),
+        ]
+        if confidence_score is not None:
+            sets.append("confidence_score = ?")
+            params.append(confidence_score)
+            sets.append("confidence_method = ?")
+            params.append(confidence_method or "layoutlmv3_token_classification")
+        if line_items is not None:
+            sets.append("line_items = ?")
+            params.append(json.dumps(line_items))
+        if validation_results is not None:
+            sets.append("validation_results = ?")
+            params.append(json.dumps(validation_results))
+        if layoutlm_fields is not None:
+            sets.append("invoice_fields = CASE WHEN verified = 1 THEN invoice_fields ELSE ? END")
+            params.append(json.dumps(layoutlm_fields))
+
+        params.append(document_id)
+        query = f"UPDATE documents SET {', '.join(sets)} WHERE id = ?"
+        cursor = connection.execute(query, params)
+        return cursor.rowcount > 0
+

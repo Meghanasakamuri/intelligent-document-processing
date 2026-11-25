@@ -1,0 +1,30 @@
+{
+  "dataset": "mathieu1256/FATURA2-invoices",
+  "train_samples": 4400,
+  "val_samples": 600,
+  "test_samples": 1400,
+  "num_labels": 47,
+  "epochs": 3,
+  "train_metrics": {
+    "train_runtime": 2340.3379,
+    "train_samples_per_second": 5.64,
+    "train_steps_per_second": 0.705,
+    "total_flos": 3504786602803200.0,
+    "train_loss": 0.2549290485499483,
+    "epoch": 3.0
+  },
+  "val_metrics": {
+    "eval_loss": 0.4962693154811859,
+    "eval_accuracy": 0.9264150489523947,
+    "eval_precision": 0.9450860240395946,
+    "eval_recall": 0.9547619047619048,
+    "eval_f1": 0.9498993248845197
+  },
+  "test_metrics": {
+    "eval_loss": 0.07883080840110779,
+    "eval_accuracy": 0.9920621356273381,
+    "eval_precision": 0.9450099981821487,
+    "eval_recall": 0.9808490566037736,
+    "eval_f1": 0.962596055920748
+  }
+}

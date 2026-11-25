@@ -1,0 +1,149 @@
+{
+  "evaluation_title": "Baseline Extraction Evaluation: FATURA2 LayoutLMv3 on 31 Prashanti Invoices",
+  "model_name": "checkpoints/layoutlmv3-fatura2",
+  "total_invoices": 31,
+  "total_fields_evaluated": 341,
+  "overall_counts": {
+    "correct": 85,
+    "incorrect": 93,
+    "missing": 132,
+    "uncertain": 31
+  },
+  "overall_accuracy_pct": 24.9,
+  "overall_error_pct": 27.3,
+  "overall_missing_pct": 38.7,
+  "overall_uncertain_pct": 9.1,
+  "field_accuracy": {
+    "vendor_name": {
+      "correct": 0,
+      "incorrect": 22,
+      "missing": 9,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 71.0,
+      "missing_pct": 29.0,
+      "uncertain_pct": 0.0
+    },
+    "customer_name": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 31,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 100.0,
+      "uncertain_pct": 0.0
+    },
+    "invoice_number": {
+      "correct": 25,
+      "incorrect": 6,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 80.6,
+      "error_pct": 19.4,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "invoice_date": {
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 100.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "subtotal": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 31,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 100.0,
+      "uncertain_pct": 0.0
+    },
+    "discount": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 31,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 100.0,
+      "uncertain_pct": 0.0
+    },
+    "cgst": {
+      "correct": 0,
+      "incorrect": 31,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 100.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "sgst": {
+      "correct": 29,
+      "incorrect": 2,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 93.5,
+      "error_pct": 6.5,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "total_tax": {
+      "correct": 0,
+      "incorrect": 31,
+      "missing": 0,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 100.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 0.0
+    },
+    "total_amount": {
+      "correct": 0,
+      "incorrect": 1,
+      "missing": 30,
+      "uncertain": 0,
+      "accuracy_pct": 0.0,
+      "error_pct": 3.2,
+      "missing_pct": 96.8,
+      "uncertain_pct": 0.0
+    },
+    "gstin": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 0,
+      "uncertain": 31,
+      "accuracy_pct": 0.0,
+      "error_pct": 0.0,
+      "missing_pct": 0.0,
+      "uncertain_pct": 100.0
+    }
+  },
+  "splits_customer_overlap": {
+    "train_invoices": 21,
+    "val_invoices": 5,
+    "test_invoices": 5,
+    "train_unique_customers": 18,
+    "val_unique_customers": 5,
+    "test_unique_customers": 5,
+    "overlap_train_val": [
+      "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+      "SINGH NAGAR P N P HEALTH CARE"
+    ],
+    "overlap_train_test": [
+      "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+      "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+      "NORI MEDICARE PRIVATE LIMITED",
+      "PRASANTHI PHARMACY"
+    ],
+    "overlap_val_test": [
+      "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED"
+    ]
+  }
+}

@@ -1,0 +1,3658 @@
+[
+  {
+    "invoice": "invoice_01.pdf",
+    "stem": "invoice_01",
+    "num_pages": 1,
+    "processing_time": 3.58,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "zyous CADLON",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1051",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "39.03",
+      "sgst": "39.03",
+      "total_tax": "78.06",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9949,
+      "invoice_number": 0.7422,
+      "vendor_name": 0.6448,
+      "notes": 0.52,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.6448
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "zyous CADLON",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'zyous CADLON' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "MAHAJAN PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1051",
+        "reference": "GSTSAL/1051",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "29/Sep/2026",
+        "reference": "29/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1561.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "39.03",
+        "reference": "39.03",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "39.03",
+        "reference": "39.03",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "78.06",
+        "reference": "78.06",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1639.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "MAHAJAN PHARMACY",
+      "invoice_number": "GSTSAL/1051",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": "1561.00",
+      "discount": "0.00",
+      "cgst": "39.03",
+      "sgst": "39.03",
+      "total_tax": "78.06",
+      "total_amount": "1639.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37HYNPK5136F1Z2"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_02.pdf",
+    "stem": "invoice_02",
+    "num_pages": 2,
+    "processing_time": 8.86,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "SYRINGES",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1052",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "401.83",
+      "sgst": "401.83",
+      "total_tax": "803.66",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9969,
+      "invoice_number": 0.9463,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "vendor_name": 0.9772,
+      "notes": 0.6893,
+      "company_name": 0.9772
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "SYRINGES",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'SYRINGES' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SSS PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1052",
+        "reference": "GSTSAL/1052",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "29/Sep/2026",
+        "reference": "29/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "16072.50",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "401.83",
+        "reference": "401.83",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "401.83",
+        "reference": "401.83",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "803.66",
+        "reference": "803.66",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "16876.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SSS PHARMACY",
+      "invoice_number": "GSTSAL/1052",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": "16072.50",
+      "discount": "0.00",
+      "cgst": "401.83",
+      "sgst": "401.83",
+      "total_tax": "803.66",
+      "total_amount": "16876.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_03.pdf",
+    "stem": "invoice_03",
+    "num_pages": 1,
+    "processing_time": 3.39,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1053",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "46.38",
+      "sgst": "46.38",
+      "total_tax": "92.76",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.943,
+      "invoice_number": 0.8899,
+      "notes": 0.7962,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "ISHA HOSPITALS & PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1053",
+        "reference": "GSTSAL/1053",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "29/Sep/2026",
+        "reference": "29/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1855.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "46.38",
+        "reference": "46.38",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "46.38",
+        "reference": "46.38",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "92.76",
+        "reference": "92.76",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1948.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "ISHA HOSPITALS & PHARMACY",
+      "invoice_number": "GSTSAL/1053",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": "1855.00",
+      "discount": "0.00",
+      "cgst": "46.38",
+      "sgst": "46.38",
+      "total_tax": "92.76",
+      "total_amount": "1948.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AYZPT9460G1ZB"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_04.pdf",
+    "stem": "invoice_04",
+    "num_pages": 1,
+    "processing_time": 3.51,
+    "correct_count": 6,
+    "incorrect_count": 2,
+    "missing_count": 3,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "SWABS",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1054",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "73.40",
+      "sgst": "73.40",
+      "total_tax": "146.80",
+      "total_amount": "2936.00",
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9964,
+      "invoice_number": 0.9464,
+      "total_amount": 0.9891,
+      "vendor_name": 0.8575,
+      "vendor_website": 0.7019,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.8575
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "SWABS",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'SWABS' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1054",
+        "reference": "GSTSAL/1054",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "29/Sep/2026",
+        "reference": "29/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2936.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "73.40",
+        "reference": "73.40",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "73.40",
+        "reference": "73.40",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "146.80",
+        "reference": "146.80",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "INCORRECT",
+        "extracted": "2936.00",
+        "reference": "3083.00",
+        "notes": "Numerical discrepancy (extracted 2936.00 vs reference 3083.00)"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+      "invoice_number": "GSTSAL/1054",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": "2936.00",
+      "discount": "0.00",
+      "cgst": "73.40",
+      "sgst": "73.40",
+      "total_tax": "146.80",
+      "total_amount": "3083.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_05.pdf",
+    "stem": "invoice_05",
+    "num_pages": 1,
+    "processing_time": 3.37,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "WOOL IP",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/994",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "66.00",
+      "sgst": "66.00",
+      "total_tax": "132.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9961,
+      "invoice_number": 0.9461,
+      "vendor_name": 0.975,
+      "vendor_website": 0.799,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.975
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "WOOL IP",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'WOOL IP' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "ABHINANDANA PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/994",
+        "reference": "GSTSAL/994",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Sep/2026",
+        "reference": "21/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2640.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "66.00",
+        "reference": "66.00",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "66.00",
+        "reference": "66.00",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "132.00",
+        "reference": "132.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2772.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "ABHINANDANA PHARMACY",
+      "invoice_number": "GSTSAL/994",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": "2640.00",
+      "discount": "0.00",
+      "cgst": "66.00",
+      "sgst": "66.00",
+      "total_tax": "132.00",
+      "total_amount": "2772.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_06.pdf",
+    "stem": "invoice_06",
+    "num_pages": 1,
+    "processing_time": 2.09,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "ROAD, Gandhi Nagar",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/995",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "40.50",
+      "sgst": "40.50",
+      "total_tax": "81.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_number": 0.9457,
+      "invoice_date": 0.9913,
+      "vendor_name": 0.7096,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.7096
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "ROAD, Gandhi Nagar",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'ROAD, Gandhi Nagar' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "NORI MEDICARE PRIVATE LIMITED",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/995",
+        "reference": "GSTSAL/995",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Sep/2026",
+        "reference": "21/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1620.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "40.50",
+        "reference": "40.50",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "40.50",
+        "reference": "40.50",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "81.00",
+        "reference": "81.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1701.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "NORI MEDICARE PRIVATE LIMITED",
+      "invoice_number": "GSTSAL/995",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": "1620.00",
+      "discount": "0.00",
+      "cgst": "40.50",
+      "sgst": "40.50",
+      "total_tax": "81.00",
+      "total_amount": "1701.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAICN1643F1ZJ"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_07.pdf",
+    "stem": "invoice_07",
+    "num_pages": 1,
+    "processing_time": 3.3,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "HMD DISPOVAN",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/996",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "39.38",
+      "sgst": "39.38",
+      "total_tax": "78.76",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9952,
+      "invoice_number": 0.9407,
+      "vendor_name": 0.7288,
+      "vendor_website": 0.6451,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.7288
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "HMD DISPOVAN",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'HMD DISPOVAN' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "LALITHA MEDICALS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/996",
+        "reference": "GSTSAL/996",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Sep/2026",
+        "reference": "21/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1575.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "39.38",
+        "reference": "39.38",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "39.38",
+        "reference": "39.38",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "78.76",
+        "reference": "78.76",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1654.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "LALITHA MEDICALS",
+      "invoice_number": "GSTSAL/996",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": "1575.00",
+      "discount": "0.00",
+      "cgst": "39.38",
+      "sgst": "39.38",
+      "total_tax": "78.76",
+      "total_amount": "1654.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_08.pdf",
+    "stem": "invoice_08",
+    "num_pages": 2,
+    "processing_time": 7.52,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Gollapudi",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/997",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "443.39",
+      "sgst": "443.39",
+      "total_tax": "886.78",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9439,
+      "vendor_name": 0.9947,
+      "invoice_number": 0.9444,
+      "notes": 0.7935,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9947
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Gollapudi",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Gollapudi' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/997",
+        "reference": "GSTSAL/997",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Sep/2026",
+        "reference": "21/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "17735.25",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "443.39",
+        "reference": "443.39",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "443.39",
+        "reference": "443.39",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "886.78",
+        "reference": "886.78",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "18622.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+      "invoice_number": "GSTSAL/997",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": "17735.25",
+      "discount": "0.00",
+      "cgst": "443.39",
+      "sgst": "443.39",
+      "total_tax": "886.78",
+      "total_amount": "18622.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAKCA8758Q1ZL"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_09.pdf",
+    "stem": "invoice_09",
+    "num_pages": 1,
+    "processing_time": 1.62,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/998",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "36.50",
+      "sgst": "36.50",
+      "total_tax": "73.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9979,
+      "invoice_number": 0.9467,
+      "notes": 0.7518,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "DR .T.UMA MAHESHWARA RAO",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/998",
+        "reference": "GSTSAL/998",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Sep/2026",
+        "reference": "21/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1460.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "36.50",
+        "reference": "36.50",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "36.50",
+        "reference": "36.50",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "73.00",
+        "reference": "73.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "1533.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "DR .T.UMA MAHESHWARA RAO",
+      "invoice_number": "GSTSAL/998",
+      "invoice_date": "21/Sep/2026",
+      "subtotal": "1460.00",
+      "discount": "0.00",
+      "cgst": "36.50",
+      "sgst": "36.50",
+      "total_tax": "73.00",
+      "total_amount": "1533.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_10.pdf",
+    "stem": "invoice_10",
+    "num_pages": 2,
+    "processing_time": 8.41,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "CANNULA",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1021",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "352.56",
+      "sgst": "352.56",
+      "total_tax": "705.12",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9973,
+      "invoice_number": 0.9411,
+      "vendor_name": 0.9871,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9871
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "CANNULA",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'CANNULA' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SRI DHANVANTARI PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1021",
+        "reference": "GSTSAL/1021",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "24/Sep/2026",
+        "reference": "24/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "14101.20",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "352.56",
+        "reference": "352.56",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "352.56",
+        "reference": "352.56",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "705.12",
+        "reference": "705.12",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "14806.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SRI DHANVANTARI PHARMACY",
+      "invoice_number": "GSTSAL/1021",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": "14101.20",
+      "discount": "0.00",
+      "cgst": "352.56",
+      "sgst": "352.56",
+      "total_tax": "705.12",
+      "total_amount": "14806.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_11.pdf",
+    "stem": "invoice_11",
+    "num_pages": 1,
+    "processing_time": 4.94,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1022",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "211.34",
+      "sgst": "211.34",
+      "total_tax": "422.68",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9948,
+      "invoice_number": 0.9276,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SRI BHAVANI PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1022",
+        "reference": "GSTSAL/1022",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "24/Sep/2026",
+        "reference": "24/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "8453.50",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "211.34",
+        "reference": "211.34",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "211.34",
+        "reference": "211.34",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "422.68",
+        "reference": "422.68",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "8876.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SRI BHAVANI PHARMACY",
+      "invoice_number": "GSTSAL/1022",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": "8453.50",
+      "discount": "0.00",
+      "cgst": "211.34",
+      "sgst": "211.34",
+      "total_tax": "422.68",
+      "total_amount": "8876.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AICPV4661J1ZS"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_12.pdf",
+    "stem": "invoice_12",
+    "num_pages": 1,
+    "processing_time": 3.38,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1023",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "500.22",
+      "sgst": "500.22",
+      "total_tax": "1000.44",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9447,
+      "invoice_number": 0.7973,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SINGH NAGAR P N P HEALTH CARE",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1023",
+        "reference": "GSTSAL/1023",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "24/Sep/2026",
+        "reference": "24/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "20008.80",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "500.22",
+        "reference": "500.22",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "500.22",
+        "reference": "500.22",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "1000.44",
+        "reference": "1000.44",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "21009.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SINGH NAGAR P N P HEALTH CARE",
+      "invoice_number": "GSTSAL/1023",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": "20008.80",
+      "discount": "0.00",
+      "cgst": "500.22",
+      "sgst": "500.22",
+      "total_tax": "1000.44",
+      "total_amount": "21009.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37CLSPA8693L1Z5"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_13.pdf",
+    "stem": "invoice_13",
+    "num_pages": 1,
+    "processing_time": 2.03,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Vinayaka Theatre",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1024",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "67.20",
+      "sgst": "67.20",
+      "total_tax": "134.40",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9975,
+      "invoice_number": 0.947,
+      "vendor_name": 0.9866,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9866
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Vinayaka Theatre",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Vinayaka Theatre' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SOUTHERN NUCLEAR SCANS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1024",
+        "reference": "GSTSAL/1024",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "24/Sep/2026",
+        "reference": "24/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2688.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "67.20",
+        "reference": "67.20",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "67.20",
+        "reference": "67.20",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "134.40",
+        "reference": "134.40",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2822.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SOUTHERN NUCLEAR SCANS",
+      "invoice_number": "GSTSAL/1024",
+      "invoice_date": "24/Sep/2026",
+      "subtotal": "2688.00",
+      "discount": "0.00",
+      "cgst": "67.20",
+      "sgst": "67.20",
+      "total_tax": "134.40",
+      "total_amount": "2822.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_14.pdf",
+    "stem": "invoice_14",
+    "num_pages": 1,
+    "processing_time": 3.31,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Chettu Center",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1331",
+      "invoice_date": "17/Nov/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "23.76",
+      "sgst": "23.76",
+      "total_tax": "47.52",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9977,
+      "invoice_number": 0.9465,
+      "vendor_name": 0.9852,
+      "vendor_website": 0.6072,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9852
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Chettu Center",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Chettu Center' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "Lakshmi Nursing Home",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1331",
+        "reference": "GSTSAL/1331",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "17/Nov/2026",
+        "reference": "17/Nov/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "950.20",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "23.76",
+        "reference": "23.76",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "23.76",
+        "reference": "23.76",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "47.52",
+        "reference": "47.52",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "998.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "Lakshmi Nursing Home",
+      "invoice_number": "GSTSAL/1331",
+      "invoice_date": "17/Nov/2026",
+      "subtotal": "950.20",
+      "discount": "0.00",
+      "cgst": "23.76",
+      "sgst": "23.76",
+      "total_tax": "47.52",
+      "total_amount": "998.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_15.pdf",
+    "stem": "invoice_15",
+    "num_pages": 1,
+    "processing_time": 5.19,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "COTTON CREPE BANDAGE",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1336",
+      "invoice_date": "18/Nov/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "509.51",
+      "sgst": "509.51",
+      "total_tax": "1019.02",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9405,
+      "invoice_number": 0.8717,
+      "vendor_name": 0.9121,
+      "notes": 0.6216,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9121
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "COTTON CREPE BANDAGE",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'COTTON CREPE BANDAGE' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SRI VIJAYA LAKSHMI MEDICAL AND FANCY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1336",
+        "reference": "GSTSAL/1336",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "18/Nov/2026",
+        "reference": "18/Nov/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "20380.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "509.51",
+        "reference": "509.51",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "509.51",
+        "reference": "509.51",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "1019.02",
+        "reference": "1019.02",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "21399.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SRI VIJAYA LAKSHMI MEDICAL AND FANCY",
+      "invoice_number": "GSTSAL/1336",
+      "invoice_date": "18/Nov/2026",
+      "subtotal": "20380.00",
+      "discount": "0.00",
+      "cgst": "509.51",
+      "sgst": "509.51",
+      "total_tax": "1019.02",
+      "total_amount": "21399.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37ECZPS3226P2ZD"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_16.pdf",
+    "stem": "invoice_16",
+    "num_pages": 1,
+    "processing_time": 3.29,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "INJ",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1337",
+      "invoice_date": "18/Nov/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "21.17",
+      "sgst": "21.17",
+      "total_tax": "42.34",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9421,
+      "invoice_number": 0.9274,
+      "vendor_name": 0.934,
+      "vendor_website": 0.685,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.934
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "INJ",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'INJ' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SUNZENNIXX",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1337",
+        "reference": "GSTSAL/1337",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "18/Nov/2026",
+        "reference": "18/Nov/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "846.50",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "21.17",
+        "reference": "21.17",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "21.17",
+        "reference": "21.17",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "42.34",
+        "reference": "42.34",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "889.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SUNZENNIXX",
+      "invoice_number": "GSTSAL/1337",
+      "invoice_date": "18/Nov/2026",
+      "subtotal": "846.50",
+      "discount": "0.00",
+      "cgst": "21.17",
+      "sgst": "21.17",
+      "total_tax": "42.34",
+      "total_amount": "889.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AUQPA8037R1ZT"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_17.pdf",
+    "stem": "invoice_17",
+    "num_pages": 1,
+    "processing_time": 3.33,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1342",
+      "invoice_date": "18/Nov/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "8.13",
+      "sgst": "8.13",
+      "total_tax": "16.26",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9432,
+      "invoice_number": 0.9021,
+      "vendor_website": 0.7457,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "DEEPIKA SURGICALS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1342",
+        "reference": "GSTSAL/1342",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "18/Nov/2026",
+        "reference": "18/Nov/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "325.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "8.13",
+        "reference": "8.13",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "8.13",
+        "reference": "8.13",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "16.26",
+        "reference": "16.26",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "341.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "DEEPIKA SURGICALS",
+      "invoice_number": "GSTSAL/1342",
+      "invoice_date": "18/Nov/2026",
+      "subtotal": "325.00",
+      "discount": "0.00",
+      "cgst": "8.13",
+      "sgst": "8.13",
+      "total_tax": "16.26",
+      "total_amount": "341.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37CCDPD8249R1ZW"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_18.pdf",
+    "stem": "invoice_18",
+    "num_pages": 1,
+    "processing_time": 3.0,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Road,",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/727",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "220.00",
+      "sgst": "220.00",
+      "total_tax": "440.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9444,
+      "invoice_number": 0.9338,
+      "notes": 0.8989,
+      "vendor_name": 0.7522,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.7522
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Road,",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Road,' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "N R I ACADEMY OF SCIENCES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/727",
+        "reference": "GSTSAL/727",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "05/Aug/2026",
+        "reference": "05/Aug/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "8800.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "220.00",
+        "reference": "220.00",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "220.00",
+        "reference": "220.00",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "440.00",
+        "reference": "440.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "9240.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "N R I ACADEMY OF SCIENCES",
+      "invoice_number": "GSTSAL/727",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": "8800.00",
+      "discount": "0.00",
+      "cgst": "220.00",
+      "sgst": "220.00",
+      "total_tax": "440.00",
+      "total_amount": "9240.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAATN4207C1Z0"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_19.pdf",
+    "stem": "invoice_19",
+    "num_pages": 1,
+    "processing_time": 2.68,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/728",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "20.63",
+      "sgst": "20.63",
+      "total_tax": "41.26",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9427,
+      "invoice_number": 0.9121,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "MAHAJAN PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/728",
+        "reference": "GSTSAL/728",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "05/Aug/2026",
+        "reference": "05/Aug/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "825.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "20.63",
+        "reference": "20.63",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "20.63",
+        "reference": "20.63",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "41.26",
+        "reference": "41.26",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "866.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "MAHAJAN PHARMACY",
+      "invoice_number": "GSTSAL/728",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": "825.00",
+      "discount": "0.00",
+      "cgst": "20.63",
+      "sgst": "20.63",
+      "total_tax": "41.26",
+      "total_amount": "866.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37HYNPK5136F1Z2"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_20.pdf",
+    "stem": "invoice_20",
+    "num_pages": 1,
+    "processing_time": 2.82,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "1 ABBOTT",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/729",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "75.68",
+      "sgst": "75.68",
+      "total_tax": "151.36",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9943,
+      "invoice_number": 0.7838,
+      "vendor_name": 0.64,
+      "vendor_website": 0.5344,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.64
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "1 ABBOTT",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted '1 ABBOTT' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "PRASANTHI PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/729",
+        "reference": "GSTSAL/729",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "05/Aug/2026",
+        "reference": "05/Aug/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "3027.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "75.68",
+        "reference": "75.68",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "75.68",
+        "reference": "75.68",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "151.36",
+        "reference": "151.36",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "3178.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "PRASANTHI PHARMACY",
+      "invoice_number": "GSTSAL/729",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": "3027.00",
+      "discount": "0.00",
+      "cgst": "75.68",
+      "sgst": "75.68",
+      "total_tax": "151.36",
+      "total_amount": "3178.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37BAPPK1430C1Z0"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_22.pdf",
+    "stem": "invoice_22",
+    "num_pages": 1,
+    "processing_time": 3.55,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "MEDIUM",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/730",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "50.34",
+      "sgst": "50.34",
+      "total_tax": "100.68",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.94,
+      "vendor_name": 0.9883,
+      "invoice_number": 0.691,
+      "vendor_website": 0.4964,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9883
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "MEDIUM",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'MEDIUM' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "DEEPIKA SURGICALS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/730",
+        "reference": "GSTSAL/730",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "05/Aug/2026",
+        "reference": "05/Aug/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2049.80",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "36.38",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "50.34",
+        "reference": "50.34",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "50.34",
+        "reference": "50.34",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "100.68",
+        "reference": "100.68",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2114.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "DEEPIKA SURGICALS",
+      "invoice_number": "GSTSAL/730",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": "2049.80",
+      "discount": "36.38",
+      "cgst": "50.34",
+      "sgst": "50.34",
+      "total_tax": "100.68",
+      "total_amount": "2114.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37CCDPD8249R1ZW"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_23.pdf",
+    "stem": "invoice_23",
+    "num_pages": 1,
+    "processing_time": 2.35,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Vinayaka Theatre",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/731",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "67.20",
+      "sgst": "67.20",
+      "total_tax": "134.40",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9975,
+      "invoice_number": 0.9453,
+      "vendor_name": 0.9486,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9486
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Vinayaka Theatre",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Vinayaka Theatre' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SOUTHERN NUCLEAR SCANS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/731",
+        "reference": "GSTSAL/731",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "05/Aug/2026",
+        "reference": "05/Aug/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2688.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "67.20",
+        "reference": "67.20",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "67.20",
+        "reference": "67.20",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "134.40",
+        "reference": "134.40",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "2822.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SOUTHERN NUCLEAR SCANS",
+      "invoice_number": "GSTSAL/731",
+      "invoice_date": "05/Aug/2026",
+      "subtotal": "2688.00",
+      "discount": "0.00",
+      "cgst": "67.20",
+      "sgst": "67.20",
+      "total_tax": "134.40",
+      "total_amount": "2822.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_24.pdf",
+    "stem": "invoice_24",
+    "num_pages": 1,
+    "processing_time": 3.48,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Gollapudi",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/732",
+      "invoice_date": "06/Aug/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "205.00",
+      "sgst": "205.00",
+      "total_tax": "410.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9439,
+      "vendor_name": 0.9924,
+      "invoice_number": 0.95,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9924
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Gollapudi",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Gollapudi' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/732",
+        "reference": "GSTSAL/732",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "06/Aug/2026",
+        "reference": "06/Aug/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "8200.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "205.00",
+        "reference": "205.00",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "205.00",
+        "reference": "205.00",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "410.00",
+        "reference": "410.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "8610.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+      "invoice_number": "GSTSAL/732",
+      "invoice_date": "06/Aug/2026",
+      "subtotal": "8200.00",
+      "discount": "0.00",
+      "cgst": "205.00",
+      "sgst": "205.00",
+      "total_tax": "410.00",
+      "total_amount": "8610.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAKCA8758Q1ZL"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_25.pdf",
+    "stem": "invoice_25",
+    "num_pages": 1,
+    "processing_time": 3.36,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/134",
+      "invoice_date": "21/Apr/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "20.94",
+      "sgst": "20.94",
+      "total_tax": "41.88",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9977,
+      "invoice_number": 0.8627,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "INDOLABS HEALTHCARE PRIVATE LIMITED(VAIBHAV MEDICALS)",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/134",
+        "reference": "GSTSAL/134",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Apr/2026",
+        "reference": "21/Apr/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "837.50",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "20.94",
+        "reference": "20.94",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "20.94",
+        "reference": "20.94",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "41.88",
+        "reference": "41.88",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "879.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "INDOLABS HEALTHCARE PRIVATE LIMITED(VAIBHAV MEDICALS)",
+      "invoice_number": "GSTSAL/134",
+      "invoice_date": "21/Apr/2026",
+      "subtotal": "837.50",
+      "discount": "0.00",
+      "cgst": "20.94",
+      "sgst": "20.94",
+      "total_tax": "41.88",
+      "total_amount": "879.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAFCI2558D1ZN"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_26.pdf",
+    "stem": "invoice_26",
+    "num_pages": 1,
+    "processing_time": 3.43,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "HEPARIN",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/135",
+      "invoice_date": "21/Apr/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "237.50",
+      "sgst": "237.50",
+      "total_tax": "475.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9445,
+      "notes": 0.9753,
+      "invoice_number": 0.9096,
+      "vendor_name": 0.8876,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.8876
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "HEPARIN",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'HEPARIN' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SRI KIRAN PRANAY SURGICALS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/135",
+        "reference": "GSTSAL/135",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Apr/2026",
+        "reference": "21/Apr/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "9500.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "237.50",
+        "reference": "237.50",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "237.50",
+        "reference": "237.50",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "475.00",
+        "reference": "475.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "9975.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SRI KIRAN PRANAY SURGICALS",
+      "invoice_number": "GSTSAL/135",
+      "invoice_date": "21/Apr/2026",
+      "subtotal": "9500.00",
+      "discount": "0.00",
+      "cgst": "237.50",
+      "sgst": "237.50",
+      "total_tax": "475.00",
+      "total_amount": "9975.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AOCPC4280J1Z0"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_27.pdf",
+    "stem": "invoice_27",
+    "num_pages": 1,
+    "processing_time": 2.72,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "SKIN STAPLER",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/137",
+      "invoice_date": "21/Apr/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "91.25",
+      "sgst": "91.25",
+      "total_tax": "182.50",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9446,
+      "notes": 0.9409,
+      "invoice_number": 0.8516,
+      "vendor_name": 0.7008,
+      "vendor_website": 0.62,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.7008
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "SKIN STAPLER",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'SKIN STAPLER' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SINGH NAGAR P N P HEALTH CARE",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/137",
+        "reference": "GSTSAL/137",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "21/Apr/2026",
+        "reference": "21/Apr/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "3650.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "91.25",
+        "reference": "91.25",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "91.25",
+        "reference": "91.25",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "182.50",
+        "reference": "182.50",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "3833.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "SINGH NAGAR P N P HEALTH CARE",
+      "invoice_number": "GSTSAL/137",
+      "invoice_date": "21/Apr/2026",
+      "subtotal": "3650.00",
+      "discount": "0.00",
+      "cgst": "91.25",
+      "sgst": "91.25",
+      "total_tax": "182.50",
+      "total_amount": "3833.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37CLSPA8693L1Z5"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_28.pdf",
+    "stem": "invoice_28",
+    "num_pages": 1,
+    "processing_time": 2.92,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "SWABS",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/139",
+      "invoice_date": "22/Apr/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "116.00",
+      "sgst": "116.00",
+      "total_tax": "232.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9974,
+      "invoice_number": 0.9464,
+      "vendor_name": 0.9396,
+      "notes": 0.6479,
+      "vendor_website": 0.507,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9396
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "SWABS",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'SWABS' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/139",
+        "reference": "GSTSAL/139",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "22/Apr/2026",
+        "reference": "22/Apr/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "4640.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "116.00",
+        "reference": "116.00",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "116.00",
+        "reference": "116.00",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "232.00",
+        "reference": "232.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "4872.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+      "invoice_number": "GSTSAL/139",
+      "invoice_date": "22/Apr/2026",
+      "subtotal": "4640.00",
+      "discount": "0.00",
+      "cgst": "116.00",
+      "sgst": "116.00",
+      "total_tax": "232.00",
+      "total_amount": "4872.00",
+      "gstins": [
+        "37COAPS3244E1Z1"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_29.pdf",
+    "stem": "invoice_29",
+    "num_pages": 1,
+    "processing_time": 2.72,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "ROAD, Gandhi Nagar",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1073",
+      "invoice_date": "01/Oct/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "612.75",
+      "sgst": "612.75",
+      "total_tax": "1225.50",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9966,
+      "invoice_number": 0.9406,
+      "vendor_name": 0.6926,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.6926
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "ROAD, Gandhi Nagar",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'ROAD, Gandhi Nagar' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "NORI MEDICARE PRIVATE LIMITED",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1073",
+        "reference": "GSTSAL/1073",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "01/Oct/2026",
+        "reference": "01/Oct/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "9950.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "612.75",
+        "reference": "612.75",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "612.75",
+        "reference": "612.75",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "1225.50",
+        "reference": "1225.50",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "11176.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "NORI MEDICARE PRIVATE LIMITED",
+      "invoice_number": "GSTSAL/1073",
+      "invoice_date": "01/Oct/2026",
+      "subtotal": "9950.00",
+      "discount": "0.00",
+      "cgst": "612.75",
+      "sgst": "612.75",
+      "total_tax": "1225.50",
+      "total_amount": "11176.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAICN1643F1ZJ"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_30.pdf",
+    "stem": "invoice_30",
+    "num_pages": 1,
+    "processing_time": 2.92,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "Gollapudi",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1316",
+      "invoice_date": "14/Nov/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "162.50",
+      "sgst": "162.50",
+      "total_tax": "325.00",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9446,
+      "notes": 0.9885,
+      "vendor_name": 0.9866,
+      "invoice_number": 0.8969,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.9866
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "Gollapudi",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'Gollapudi' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1316",
+        "reference": "GSTSAL/1316",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "14/Nov/2026",
+        "reference": "14/Nov/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "6500.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "162.50",
+        "reference": "162.50",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "162.50",
+        "reference": "162.50",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "325.00",
+        "reference": "325.00",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "6825.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+      "invoice_number": "GSTSAL/1316",
+      "invoice_date": "14/Nov/2026",
+      "subtotal": "6500.00",
+      "discount": "0.00",
+      "cgst": "162.50",
+      "sgst": "162.50",
+      "total_tax": "325.00",
+      "total_amount": "6825.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AAKCA8758Q1ZL"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_31.pdf",
+    "stem": "invoice_31",
+    "num_pages": 1,
+    "processing_time": 3.69,
+    "correct_count": 6,
+    "incorrect_count": 1,
+    "missing_count": 4,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": "pedia drip-plus",
+      "customer_name": null,
+      "invoice_number": "GSTSAL/1050",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "503.86",
+      "sgst": "503.86",
+      "total_tax": "1007.72",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.993,
+      "invoice_number": 0.799,
+      "vendor_name": 0.8121,
+      "vendor_website": 0.3833,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99,
+      "company_name": 0.8121
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "INCORRECT",
+        "extracted": "pedia drip-plus",
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Mismatched value: extracted 'pedia drip-plus' vs reference 'SIVA SAI ENTERPRISES'"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "MAMATA MEDICALS",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/1050",
+        "reference": "GSTSAL/1050",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "29/Sep/2026",
+        "reference": "29/Sep/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "10404.50",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "503.86",
+        "reference": "503.86",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "503.86",
+        "reference": "503.86",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "1007.72",
+        "reference": "1007.72",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "11412.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "MAMATA MEDICALS",
+      "invoice_number": "GSTSAL/1050",
+      "invoice_date": "29/Sep/2026",
+      "subtotal": "10404.50",
+      "discount": "0.00",
+      "cgst": "503.86",
+      "sgst": "503.86",
+      "total_tax": "1007.72",
+      "total_amount": "11412.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37AOSPN1761M1Z7"
+      ]
+    }
+  },
+  {
+    "invoice": "invoice_32.pdf",
+    "stem": "invoice_32",
+    "num_pages": 1,
+    "processing_time": 3.17,
+    "correct_count": 6,
+    "incorrect_count": 0,
+    "missing_count": 5,
+    "uncertain_count": 0,
+    "extracted_fields": {
+      "vendor_name": null,
+      "customer_name": null,
+      "invoice_number": "GSTSAL/379",
+      "invoice_date": "02/Jun/2026",
+      "subtotal": null,
+      "discount": null,
+      "cgst": "418.84",
+      "sgst": "418.84",
+      "total_tax": "837.68",
+      "total_amount": null,
+      "gstin": "37COAPS3244E1Z1"
+    },
+    "confidence_scores": {
+      "invoice_date": 0.9967,
+      "notes": 0.9569,
+      "invoice_number": 0.8986,
+      "gst_number": 0.95,
+      "cgst_amount": 0.9,
+      "sgst_amount": 0.9,
+      "tax_amount": 0.9,
+      "currency": 0.99
+    },
+    "field_evaluations": {
+      "vendor_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "SIVA SAI ENTERPRISES",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "customer_name": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "PRASANTHI PHARMACY",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "invoice_number": {
+        "status": "CORRECT",
+        "extracted": "GSTSAL/379",
+        "reference": "GSTSAL/379",
+        "notes": "Exact invoice number match"
+      },
+      "invoice_date": {
+        "status": "CORRECT",
+        "extracted": "02/Jun/2026",
+        "reference": "02/Jun/2026",
+        "notes": "Exact string match"
+      },
+      "subtotal": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "16753.50",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "discount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "0.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "cgst": {
+        "status": "CORRECT",
+        "extracted": "418.84",
+        "reference": "418.84",
+        "notes": "Exact numerical match"
+      },
+      "sgst": {
+        "status": "CORRECT",
+        "extracted": "418.84",
+        "reference": "418.84",
+        "notes": "Exact numerical match"
+      },
+      "total_tax": {
+        "status": "CORRECT",
+        "extracted": "837.68",
+        "reference": "837.68",
+        "notes": "Exact numerical match"
+      },
+      "total_amount": {
+        "status": "MISSING",
+        "extracted": null,
+        "reference": "17591.00",
+        "notes": "Field not extracted by production pipeline"
+      },
+      "gstin": {
+        "status": "CORRECT",
+        "extracted": "37COAPS3244E1Z1",
+        "reference": "37COAPS3244E1Z1",
+        "notes": "Exact match with Seller GSTIN (37COAPS3244E1Z1)"
+      }
+    },
+    "reference_text": {
+      "vendor_name": "SIVA SAI ENTERPRISES",
+      "customer_name": "PRASANTHI PHARMACY",
+      "invoice_number": "GSTSAL/379",
+      "invoice_date": "02/Jun/2026",
+      "subtotal": "16753.50",
+      "discount": "0.00",
+      "cgst": "418.84",
+      "sgst": "418.84",
+      "total_tax": "837.68",
+      "total_amount": "17591.00",
+      "gstins": [
+        "37COAPS3244E1Z1",
+        "37BAPPK1430C1Z0"
+      ]
+    }
+  }
+]

@@ -1,0 +1,1156 @@
+{
+  "report_tag": "app_workflow_lineitems_fresh25",
+  "total_invoices": 25,
+  "total_time_seconds": 86.24,
+  "results_summary": {
+    "vendor_name": {
+      "gt_present": 25,
+      "predictions_returned": 25,
+      "correct": 23,
+      "incorrect": 2,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.92,
+      "recall": 0.92,
+      "accuracy": 0.92,
+      "f1": 0.92,
+      "failure_reasons": {
+        "name_mismatch (got 'Carey', expected 'Morton-Leach')": 1,
+        "name_mismatch (got 'Ball', expected 'Brooks LLC')": 1
+      }
+    },
+    "customer_name": {
+      "gt_present": 17,
+      "predictions_returned": 16,
+      "correct": 15,
+      "incorrect": 1,
+      "missing": 1,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.9375,
+      "recall": 0.8824,
+      "accuracy": 0.8824,
+      "f1": 0.9091,
+      "failure_reasons": {
+        "missing_extraction": 1,
+        "name_mismatch (got 'TorriBradford', expected 'Terri Bradford')": 1
+      }
+    },
+    "invoice_number": {
+      "gt_present": 22,
+      "predictions_returned": 23,
+      "correct": 10,
+      "incorrect": 10,
+      "missing": 2,
+      "spurious": 3,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.4348,
+      "recall": 0.4545,
+      "accuracy": 0.4545,
+      "f1": 0.4444,
+      "failure_reasons": {
+        "identifier_mismatch (got 'INVa{GAO741', expected 'INV91640741')": 1,
+        "identifier_mismatch (got '7Y9M90-739', expected '7Y9M9d-739')": 1,
+        "missing_extraction": 2,
+        "identifier_mismatch (got '9694-148.', expected '9694-148')": 1,
+        "identifier_mismatch (got 'INV/O3-71/601', expected 'INV/03-71/601')": 1,
+        "identifier_mismatch (got 'SYOM5d-646', expected '9Y9M5d-646')": 1,
+        "identifier_mismatch (got '3Y5M64-750', expected '3Y5M6d-750')": 1,
+        "identifier_mismatch (got '6Y7M74-236', expected '6Y7M7d-236')": 1,
+        "identifier_mismatch (got 'Sy4M6d-319', expected '9Y4M6d-319')": 1,
+        "identifier_mismatch (got '3249-61', expected '3249-616')": 1,
+        "identifier_mismatch (got 'evend-s25', expected '6Y8M4d-425')": 1
+      }
+    },
+    "po_number": {
+      "gt_present": 4,
+      "predictions_returned": 4,
+      "correct": 4,
+      "incorrect": 0,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "failure_reasons": {}
+    },
+    "invoice_date": {
+      "gt_present": 25,
+      "predictions_returned": 25,
+      "correct": 23,
+      "incorrect": 2,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.92,
+      "recall": 0.92,
+      "accuracy": 0.92,
+      "f1": 0.92,
+      "failure_reasons": {
+        "date_mismatch (got '2017-11-21', expected '2008-04-11')": 1,
+        "date_mismatch (got '2017-09-08', expected '2015-07-21')": 1
+      }
+    },
+    "due_date": {
+      "gt_present": 14,
+      "predictions_returned": 14,
+      "correct": 13,
+      "incorrect": 1,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.9286,
+      "recall": 0.9286,
+      "accuracy": 0.9286,
+      "f1": 0.9286,
+      "failure_reasons": {
+        "date_mismatch (got '2018-06-18', expected '2018-06-15')": 1
+      }
+    },
+    "subtotal": {
+      "gt_present": 17,
+      "predictions_returned": 17,
+      "correct": 17,
+      "incorrect": 0,
+      "missing": 8,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 17,
+      "derived": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "failure_reasons": {}
+    },
+    "tax_amount": {
+      "gt_present": 14,
+      "predictions_returned": 13,
+      "correct": 13,
+      "incorrect": 0,
+      "missing": 13,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 13,
+      "derived": 0,
+      "precision": 1.0,
+      "recall": 0.9286,
+      "accuracy": 0.9286,
+      "f1": 0.963,
+      "failure_reasons": {
+        "missing_extraction": 1
+      }
+    },
+    "discount": {
+      "gt_present": 3,
+      "predictions_returned": 3,
+      "correct": 3,
+      "incorrect": 0,
+      "missing": 22,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 3,
+      "derived": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "failure_reasons": {}
+    },
+    "total_amount": {
+      "gt_present": 25,
+      "predictions_returned": 25,
+      "correct": 23,
+      "incorrect": 2,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 1,
+      "normalized": 24,
+      "derived": 0,
+      "precision": 0.92,
+      "recall": 0.92,
+      "accuracy": 0.92,
+      "f1": 0.92,
+      "failure_reasons": {
+        "amount_mismatch (got 33.05, expected 533.05)": 1,
+        "amount_mismatch (got 186.08, expected 1186.08)": 1
+      }
+    },
+    "currency": {
+      "gt_present": 25,
+      "predictions_returned": 25,
+      "correct": 23,
+      "incorrect": 2,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.92,
+      "recall": 0.92,
+      "accuracy": 0.92,
+      "f1": 0.92,
+      "failure_reasons": {
+        "currency_mismatch (got 'USD', expected 'EUR')": 2
+      }
+    },
+    "line_items": {
+      "gt_present": 25,
+      "predictions_returned": 25,
+      "correct": 12,
+      "incorrect": 13,
+      "missing": 0,
+      "spurious": 0,
+      "direct": 0,
+      "normalized": 0,
+      "derived": 0,
+      "precision": 0.48,
+      "recall": 0.48,
+      "accuracy": 0.48,
+      "f1": 0.48,
+      "failure_reasons": {
+        "line_items_mismatch (got 4, expected 1)": 4,
+        "line_items_mismatch (got 5, expected 1)": 5,
+        "line_items_mismatch (got 3, expected 1)": 3,
+        "line_items_mismatch (got 2, expected 4)": 1
+      }
+    }
+  },
+  "line_item_metrics": {
+    "table_detection_rate": 1.0,
+    "table_detected_count": 25,
+    "total_gt_rows": 83,
+    "total_pred_rows": 89,
+    "total_matched_rows": 76,
+    "row_precision": 0.8539,
+    "row_recall": 0.9157,
+    "row_f1": 0.8837,
+    "desc_accuracy": 0.9868,
+    "qty_accuracy": 0.8289,
+    "price_accuracy": 0.7105,
+    "total_accuracy": 0.7632,
+    "row_exact_rate": 0.6711,
+    "invoice_exact_count": 12,
+    "invoice_exact_rate": 0.48
+  },
+  "date_forensics": [
+    {
+      "image": "Template44_Instance171.jpg",
+      "template": 44,
+      "gt_invoice_date": "1995-03-23",
+      "gt_due_date": null,
+      "ocr_raw_date": "23-Mar-1995",
+      "model_prediction": "1995-03-23",
+      "api_saved_date": "1995-03-23",
+      "ui_displayed_date": "1995-03-23",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template44_Instance180.jpg",
+      "template": 44,
+      "gt_invoice_date": "1997-10-23",
+      "gt_due_date": null,
+      "ocr_raw_date": "23-Oct-1997",
+      "model_prediction": "1997-10-23",
+      "api_saved_date": "1997-10-23",
+      "ui_displayed_date": "1997-10-23",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template44_Instance187.jpg",
+      "template": 44,
+      "gt_invoice_date": "2011-02-22",
+      "gt_due_date": null,
+      "ocr_raw_date": "22-Feb-2011",
+      "model_prediction": "2011-02-22",
+      "api_saved_date": "2011-02-22",
+      "ui_displayed_date": "2011-02-22",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template44_Instance19.jpg",
+      "template": 44,
+      "gt_invoice_date": "1996-08-01",
+      "gt_due_date": null,
+      "ocr_raw_date": "01-Aug-1996",
+      "model_prediction": "1996-08-01",
+      "api_saved_date": "1996-08-01",
+      "ui_displayed_date": "1996-08-01",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template45_Instance178.jpg",
+      "template": 45,
+      "gt_invoice_date": "2004-07-02",
+      "gt_due_date": null,
+      "ocr_raw_date": "02-Jul-2004",
+      "model_prediction": "2004-07-02",
+      "api_saved_date": "2004-07-02",
+      "ui_displayed_date": "2004-07-02",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template45_Instance187.jpg",
+      "template": 45,
+      "gt_invoice_date": "2020-11-16",
+      "gt_due_date": null,
+      "ocr_raw_date": "16-Nov-2020",
+      "model_prediction": "2020-11-16",
+      "api_saved_date": "2020-11-16",
+      "ui_displayed_date": "2020-11-16",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template45_Instance192.jpg",
+      "template": 45,
+      "gt_invoice_date": "2013-03-27",
+      "gt_due_date": null,
+      "ocr_raw_date": "27-Mar-2013",
+      "model_prediction": "2013-03-27",
+      "api_saved_date": "2013-03-27",
+      "ui_displayed_date": "2013-03-27",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template45_Instance25.jpg",
+      "template": 45,
+      "gt_invoice_date": "2010-02-13",
+      "gt_due_date": null,
+      "ocr_raw_date": "13-Feb-2010",
+      "model_prediction": "2010-02-13",
+      "api_saved_date": "2010-02-13",
+      "ui_displayed_date": "2010-02-13",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template46_Instance171.jpg",
+      "template": 46,
+      "gt_invoice_date": "2020-06-05",
+      "gt_due_date": "2021-01-22",
+      "ocr_raw_date": "05-Jun-2020",
+      "model_prediction": "2020-06-05",
+      "api_saved_date": "2020-06-05",
+      "ui_displayed_date": "2020-06-05",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template46_Instance180.jpg",
+      "template": 46,
+      "gt_invoice_date": "2020-10-17",
+      "gt_due_date": "2014-02-12",
+      "ocr_raw_date": "17-Oct-2020",
+      "model_prediction": "2020-10-17",
+      "api_saved_date": "2020-10-17",
+      "ui_displayed_date": "2020-10-17",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template46_Instance182.jpg",
+      "template": 46,
+      "gt_invoice_date": "2006-07-30",
+      "gt_due_date": "2018-06-15",
+      "ocr_raw_date": "30-Jul-2006",
+      "model_prediction": "2006-07-30",
+      "api_saved_date": "2006-07-30",
+      "ui_displayed_date": "2006-07-30",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template46_Instance19.jpg",
+      "template": 46,
+      "gt_invoice_date": "1999-11-22",
+      "gt_due_date": "1994-06-21",
+      "ocr_raw_date": "22-Nov-1999",
+      "model_prediction": "1999-11-22",
+      "api_saved_date": "1999-11-22",
+      "ui_displayed_date": "1999-11-22",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template47_Instance126.jpg",
+      "template": 47,
+      "gt_invoice_date": "2018-08-19",
+      "gt_due_date": "1996-11-27",
+      "ocr_raw_date": "19-Aug-2018",
+      "model_prediction": "2018-08-19",
+      "api_saved_date": "2018-08-19",
+      "ui_displayed_date": "2018-08-19",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template47_Instance137.jpg",
+      "template": 47,
+      "gt_invoice_date": "1997-02-10",
+      "gt_due_date": "2008-03-29",
+      "ocr_raw_date": "10-Feb-1997",
+      "model_prediction": "1997-02-10",
+      "api_saved_date": "1997-02-10",
+      "ui_displayed_date": "1997-02-10",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template47_Instance139.jpg",
+      "template": 47,
+      "gt_invoice_date": "2004-08-28",
+      "gt_due_date": "2016-10-11",
+      "ocr_raw_date": "28-Aug-2004",
+      "model_prediction": "2004-08-28",
+      "api_saved_date": "2004-08-28",
+      "ui_displayed_date": "2004-08-28",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template47_Instance141.jpg",
+      "template": 47,
+      "gt_invoice_date": "2013-11-09",
+      "gt_due_date": "2012-08-05",
+      "ocr_raw_date": "09-Nov-2013",
+      "model_prediction": "2013-11-09",
+      "api_saved_date": "2013-11-09",
+      "ui_displayed_date": "2013-11-09",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template48_Instance31.jpg",
+      "template": 48,
+      "gt_invoice_date": "2015-11-30",
+      "gt_due_date": "2016-11-29",
+      "ocr_raw_date": "30-Nov-2015",
+      "model_prediction": "2015-11-30",
+      "api_saved_date": "2015-11-30",
+      "ui_displayed_date": "2015-11-30",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template48_Instance36.jpg",
+      "template": 48,
+      "gt_invoice_date": "2000-11-16",
+      "gt_due_date": "2020-03-27",
+      "ocr_raw_date": "16-Nov-2000",
+      "model_prediction": "2000-11-16",
+      "api_saved_date": "2000-11-16",
+      "ui_displayed_date": "2000-11-16",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template48_Instance51.jpg",
+      "template": 48,
+      "gt_invoice_date": "2004-09-09",
+      "gt_due_date": "2015-03-20",
+      "ocr_raw_date": "09-Sep-2004",
+      "model_prediction": "2004-09-09",
+      "api_saved_date": "2004-09-09",
+      "ui_displayed_date": "2004-09-09",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template49_Instance154.jpg",
+      "template": 49,
+      "gt_invoice_date": "2001-08-11",
+      "gt_due_date": null,
+      "ocr_raw_date": "11-Aug-2001",
+      "model_prediction": "2001-08-11",
+      "api_saved_date": "2001-08-11",
+      "ui_displayed_date": "2001-08-11",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template49_Instance175.jpg",
+      "template": 49,
+      "gt_invoice_date": "2007-12-06",
+      "gt_due_date": null,
+      "ocr_raw_date": "06-Dec-2007",
+      "model_prediction": "2007-12-06",
+      "api_saved_date": "2007-12-06",
+      "ui_displayed_date": "2007-12-06",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template49_Instance18.jpg",
+      "template": 49,
+      "gt_invoice_date": "2014-02-20",
+      "gt_due_date": null,
+      "ocr_raw_date": "20-Feb-2014",
+      "model_prediction": "2014-02-20",
+      "api_saved_date": "2014-02-20",
+      "ui_displayed_date": "2014-02-20",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    },
+    {
+      "image": "Template50_Instance76.jpg",
+      "template": 50,
+      "gt_invoice_date": "2008-04-11",
+      "gt_due_date": "2017-11-21",
+      "ocr_raw_date": "21-Nov-2017",
+      "model_prediction": "2017-11-21",
+      "api_saved_date": "2017-11-21",
+      "ui_displayed_date": "2017-11-21",
+      "is_date_correct": false,
+      "failure_reason": "date_mismatch (got '2017-11-21', expected '2008-04-11')"
+    },
+    {
+      "image": "Template50_Instance79.jpg",
+      "template": 50,
+      "gt_invoice_date": "2015-07-21",
+      "gt_due_date": "2017-09-08",
+      "ocr_raw_date": "08-Sep-2017",
+      "model_prediction": "2017-09-08",
+      "api_saved_date": "2017-09-08",
+      "ui_displayed_date": "2017-09-08",
+      "is_date_correct": false,
+      "failure_reason": "date_mismatch (got '2017-09-08', expected '2015-07-21')"
+    },
+    {
+      "image": "Template50_Instance81.jpg",
+      "template": 50,
+      "gt_invoice_date": "2021-10-10",
+      "gt_due_date": "2014-06-28",
+      "ocr_raw_date": "10-Oct-2021",
+      "model_prediction": "2021-10-10",
+      "api_saved_date": "2021-10-10",
+      "ui_displayed_date": "2021-10-10",
+      "is_date_correct": true,
+      "failure_reason": "exact_match"
+    }
+  ],
+  "financial_audit": [
+    {
+      "image": "Template44_Instance171.jpg",
+      "subtotal": {
+        "val": "1177.42",
+        "gt": "1177.42",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "78.30",
+        "gt": "78.30",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "1214.98",
+        "gt": "1214.98",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template44_Instance180.jpg",
+      "subtotal": {
+        "val": "1053.04",
+        "gt": "1053.04",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "61.79",
+        "gt": "61.79",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "1103.88",
+        "gt": "1103.88",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": true
+    },
+    {
+      "image": "Template44_Instance187.jpg",
+      "subtotal": {
+        "val": "279.59",
+        "gt": "279.59",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "14.37",
+        "gt": "14.37",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "283.03",
+        "gt": "283.03",
+        "source": "localized_ocr_patch"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template44_Instance19.jpg",
+      "subtotal": {
+        "val": "1353.87",
+        "gt": "1353.87",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "79.74",
+        "gt": "79.74",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "1409.65",
+        "gt": "1409.65",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template45_Instance178.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "411.67",
+        "gt": "411.67",
+        "source": "localized_ocr_patch"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template45_Instance187.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "891.94",
+        "gt": "891.94",
+        "source": "localized_ocr_patch"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template45_Instance192.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "470.20",
+        "gt": "470.20",
+        "source": "localized_ocr_patch"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template45_Instance25.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "956.97",
+        "gt": "956.97",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template46_Instance171.jpg",
+      "subtotal": {
+        "val": "537.62",
+        "gt": "537.62",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "21.93",
+        "gt": "21.93",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "33.05",
+        "gt": "533.05",
+        "source": "token_classification"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template46_Instance180.jpg",
+      "subtotal": {
+        "val": "819.76",
+        "gt": "819.76",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "33.76",
+        "gt": "33.76",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "816.14",
+        "gt": "816.14",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template46_Instance182.jpg",
+      "subtotal": {
+        "val": "77.89",
+        "gt": "77.89",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "3.62",
+        "gt": "3.62",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "77.68",
+        "gt": "77.68",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template46_Instance19.jpg",
+      "subtotal": {
+        "val": "851.65",
+        "gt": "851.65",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "25.89",
+        "gt": "25.89",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "851.91",
+        "gt": "851.91",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template47_Instance126.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "600.38",
+        "gt": "600.38",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": true
+    },
+    {
+      "image": "Template47_Instance137.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "649.76",
+        "gt": "649.76",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template47_Instance139.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "136.44",
+        "gt": "136.44",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": true
+    },
+    {
+      "image": "Template47_Instance141.jpg",
+      "subtotal": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "701.21",
+        "gt": "701.21",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template48_Instance31.jpg",
+      "subtotal": {
+        "val": "226.49",
+        "gt": "226.49",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "20.38",
+        "gt": "20.38",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "229.64",
+        "gt": "229.64",
+        "source": "localized_ocr_patch"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template48_Instance36.jpg",
+      "subtotal": {
+        "val": "1459.09",
+        "gt": "1459.09",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": null,
+        "gt": "131.32",
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "1510.12",
+        "gt": "1510.12",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template48_Instance51.jpg",
+      "subtotal": {
+        "val": "1145.06",
+        "gt": "1145.06",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "103.06",
+        "gt": "103.06",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "186.08",
+        "gt": "1186.08",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template49_Instance154.jpg",
+      "subtotal": {
+        "val": "391.18",
+        "gt": "391.18",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "399.93",
+        "gt": "399.93",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template49_Instance175.jpg",
+      "subtotal": {
+        "val": "250.72",
+        "gt": "250.72",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "256.93",
+        "gt": "256.93",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template49_Instance18.jpg",
+      "subtotal": {
+        "val": "1206.21",
+        "gt": "1206.21",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "discount": {
+        "val": null,
+        "gt": null,
+        "source": null
+      },
+      "total": {
+        "val": "1273.85",
+        "gt": "1273.85",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template50_Instance76.jpg",
+      "subtotal": {
+        "val": "902.46",
+        "gt": "902.46",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "57.23",
+        "gt": "57.23",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": "14.53",
+        "gt": "14.53",
+        "source": "spatial_anchor"
+      },
+      "total": {
+        "val": "930.27",
+        "gt": "930.27",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template50_Instance79.jpg",
+      "subtotal": {
+        "val": "374.14",
+        "gt": "374.14",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "16.21",
+        "gt": "16.21",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": "17.55",
+        "gt": "17.55",
+        "source": "spatial_anchor"
+      },
+      "total": {
+        "val": "379.99",
+        "gt": "379.99",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": false
+    },
+    {
+      "image": "Template50_Instance81.jpg",
+      "subtotal": {
+        "val": "853.05",
+        "gt": "853.06",
+        "source": "spatial_anchor"
+      },
+      "tax": {
+        "val": "47.56",
+        "gt": "47.56",
+        "source": "spatial_anchor"
+      },
+      "discount": {
+        "val": "12.54",
+        "gt": "12.54",
+        "source": "spatial_anchor"
+      },
+      "total": {
+        "val": "890.98",
+        "gt": "890.98",
+        "source": "spatial_anchor"
+      },
+      "arithmetic_valid": true
+    }
+  ],
+  "discrepancies": []
+}

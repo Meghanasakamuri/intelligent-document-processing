@@ -1,0 +1,2241 @@
+{
+  "dataset": "Indian GST Invoices",
+  "total_invoices": 31,
+  "total_fields_evaluated": 328,
+  "overall_accuracy_pct": 90.9,
+  "field_statistics": {
+    "vendor_name": {
+      "total": 31,
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "accuracy_pct": 100.0
+    },
+    "customer_name": {
+      "total": 31,
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "accuracy_pct": 100.0
+    },
+    "vendor_gstin": {
+      "total": 31,
+      "correct": 22,
+      "incorrect": 9,
+      "missing": 0,
+      "accuracy_pct": 71.0
+    },
+    "customer_gstin": {
+      "total": 21,
+      "correct": 12,
+      "incorrect": 9,
+      "missing": 0,
+      "accuracy_pct": 57.1
+    },
+    "invoice_number": {
+      "total": 31,
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "accuracy_pct": 100.0
+    },
+    "invoice_date": {
+      "total": 31,
+      "correct": 31,
+      "incorrect": 0,
+      "missing": 0,
+      "accuracy_pct": 100.0
+    },
+    "subtotal": {
+      "total": 31,
+      "correct": 29,
+      "incorrect": 2,
+      "missing": 0,
+      "accuracy_pct": 93.5
+    },
+    "cgst_amount": {
+      "total": 31,
+      "correct": 28,
+      "incorrect": 3,
+      "missing": 0,
+      "accuracy_pct": 90.3
+    },
+    "sgst_amount": {
+      "total": 31,
+      "correct": 29,
+      "incorrect": 2,
+      "missing": 0,
+      "accuracy_pct": 93.5
+    },
+    "tax_amount": {
+      "total": 31,
+      "correct": 26,
+      "incorrect": 5,
+      "missing": 0,
+      "accuracy_pct": 83.9
+    },
+    "total_amount": {
+      "total": 28,
+      "correct": 28,
+      "incorrect": 0,
+      "missing": 0,
+      "accuracy_pct": 100.0
+    }
+  },
+  "per_invoice_results": [
+    {
+      "filename": "invoice_01.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "MAHAJAN PHARMACY",
+          "pred": "MAHAJAN PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37HYNPK5136F1Z2",
+          "pred": "37HYNPK5136F1Z2",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1051",
+          "pred": "GSTSAL/1051",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "29/Sep/2026",
+          "pred": "2026-09-29",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "1561.00",
+          "pred": "1561.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "39.03",
+          "pred": "39.03",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "39.03",
+          "pred": "39.03",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "78.06",
+          "pred": "78.06",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "1639.00",
+          "pred": "1639.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_02.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SSS PHARMACY",
+          "pred": "SSS PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1052",
+          "pred": "GSTSAL/1052",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "29/Sep/2026",
+          "pred": "2026-09-29",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "16072.50",
+          "pred": "16072.50",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "401.83",
+          "pred": "16072.50",
+          "match": false,
+          "reason": "numeric mismatch (16072.50 vs 401.83)"
+        },
+        "sgst_amount": {
+          "gt": "401.83",
+          "pred": "16072.50",
+          "match": false,
+          "reason": "numeric mismatch (16072.50 vs 401.83)"
+        },
+        "tax_amount": {
+          "gt": "803.66",
+          "pred": "401.83",
+          "match": false,
+          "reason": "numeric mismatch (401.83 vs 803.66)"
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_03.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "ISHA HOSPITALS & PHARMACY",
+          "pred": "ISHA HOSPITALS & PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AYZPT9460G1ZB",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AYZPT9460G1ZB)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AYZPT9460G1ZB",
+          "match": false,
+          "reason": "gstin mismatch (37AYZPT9460G1ZB vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1053",
+          "pred": "GSTSAL/1053",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "29/Sep/2026",
+          "pred": "2026-09-29",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "1855.00",
+          "pred": "1855.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "46.38",
+          "pred": "46.38",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "46.38",
+          "pred": "46.38",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "92.76",
+          "pred": "92.76",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "1948.00",
+          "pred": "1948.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_04.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+          "pred": "HOSPITAL",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1054",
+          "pred": "GSTSAL/1054",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "29/Sep/2026",
+          "pred": "2026-09-29",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "2936.00",
+          "pred": "2936.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "73.40",
+          "pred": "73.40",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "73.40",
+          "pred": "73.40",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "146.80",
+          "pred": "146.80",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "3083.00",
+          "pred": "3083.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_05.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "ABHINANDANA PHARMACY",
+          "pred": "ABHINANDANA PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/994",
+          "pred": "GSTSAL/994",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Sep/2026",
+          "pred": "2026-09-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "2640.00",
+          "pred": "2640.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "66.00",
+          "pred": "66.00",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "66.00",
+          "pred": "66.00",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "132.00",
+          "pred": "132.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "2772.00",
+          "pred": "2772.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_06.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "NORI MEDICARE PRIVATE LIMITED",
+          "pred": "NORI MEDICARE PRIVATE LIMITED",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37AAICN1643F1ZJ",
+          "pred": "37AAICN1643F1ZJ",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/995",
+          "pred": "GSTSAL/995",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Sep/2026",
+          "pred": "2026-09-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "1620.00",
+          "pred": "1620.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "40.50",
+          "pred": "40.50",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "40.50",
+          "pred": "40.50",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "81.00",
+          "pred": "81.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "1701.00",
+          "pred": "1701.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_07.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "LALITHA MEDICALS",
+          "pred": "LALITHA MEDICALS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/996",
+          "pred": "GSTSAL/996",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Sep/2026",
+          "pred": "2026-09-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "1575.00",
+          "pred": "1575.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "39.38",
+          "pred": "39.38",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "39.38",
+          "pred": "39.38",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "78.76",
+          "pred": "78.76",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "1654.00",
+          "pred": "1654.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_08.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+          "pred": "PRIVATE LIMITED",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AAKCA8758Q1ZL",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AAKCA8758Q1ZL)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AAKCA8758Q1ZL",
+          "match": false,
+          "reason": "gstin mismatch (37AAKCA8758Q1ZL vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/997",
+          "pred": "GSTSAL/997",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Sep/2026",
+          "pred": "2026-09-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "17735.25",
+          "pred": "1735.25",
+          "match": false,
+          "reason": "numeric mismatch (1735.25 vs 17735.25)"
+        },
+        "cgst_amount": {
+          "gt": "443.39",
+          "pred": "1735.25",
+          "match": false,
+          "reason": "numeric mismatch (1735.25 vs 443.39)"
+        },
+        "sgst_amount": {
+          "gt": "443.39",
+          "pred": "1735.25",
+          "match": false,
+          "reason": "numeric mismatch (1735.25 vs 443.39)"
+        },
+        "tax_amount": {
+          "gt": "886.78",
+          "pred": "443.39",
+          "match": false,
+          "reason": "numeric mismatch (443.39 vs 886.78)"
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_09.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "DR .T.UMA MAHESHWARA RAO",
+          "pred": "DR .T.UMA MAHESHWARA RAO",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/998",
+          "pred": "GSTSAL/998",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Sep/2026",
+          "pred": "2026-09-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "1460.00",
+          "pred": "1460.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "36.50",
+          "pred": "36.50",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "36.50",
+          "pred": "36.50",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "73.00",
+          "pred": "73.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "1533.00",
+          "pred": "1533.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_10.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SRI DHANVANTARI PHARMACY",
+          "pred": "SRI DHANVANTARI PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1021",
+          "pred": "GSTSAL/1021",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "24/Sep/2026",
+          "pred": "2026-09-24",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "14101.20",
+          "pred": "14101.20",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "352.56",
+          "pred": "14101.20",
+          "match": false,
+          "reason": "numeric mismatch (14101.20 vs 352.56)"
+        },
+        "sgst_amount": {
+          "gt": "352.56",
+          "pred": "352.56",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "705.12",
+          "pred": "352.56",
+          "match": false,
+          "reason": "numeric mismatch (352.56 vs 705.12)"
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_11.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SRI BHAVANI PHARMACY",
+          "pred": "SRI BHAVANI PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37AICPV4661J1ZS",
+          "pred": "37AICPV4661J1ZS",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1022",
+          "pred": "GSTSAL/1022",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "24/Sep/2026",
+          "pred": "2026-09-24",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "8453.50",
+          "pred": "8453.50",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "211.34",
+          "pred": "211.34",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "211.34",
+          "pred": "211.34",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "422.68",
+          "pred": "422.68",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "8876.00",
+          "pred": "8876.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_12.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SINGH NAGAR P N P HEALTH CARE",
+          "pred": "SINGH NAGAR P N P HEALTH CARE",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37CLSPA8693L1Z5",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37CLSPA8693L1Z5)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37CLSPA8693L1Z5",
+          "match": false,
+          "reason": "gstin mismatch (37CLSPA8693L1Z5 vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1023",
+          "pred": "GSTSAL/1023",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "24/Sep/2026",
+          "pred": "2026-09-24",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "20008.80",
+          "pred": "2008.80",
+          "match": false,
+          "reason": "numeric mismatch (2008.80 vs 20008.80)"
+        },
+        "cgst_amount": {
+          "gt": "500.22",
+          "pred": "500.22",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "500.22",
+          "pred": "500.22",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "1000.44",
+          "pred": "1000.44",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "21009.00",
+          "pred": "21009.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_13.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SOUTHERN NUCLEAR SCANS",
+          "pred": "SOUTHERN NUCLEAR SCANS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1024",
+          "pred": "GSTSAL/1024",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "24/Sep/2026",
+          "pred": "2026-09-24",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "2688.00",
+          "pred": "2688.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "67.20",
+          "pred": "67.20",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "67.20",
+          "pred": "67.20",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "134.40",
+          "pred": "134.40",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "2822.00",
+          "pred": "2822.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_14.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "Lakshmi Nursing Home",
+          "pred": "Lakshmi Nursing Home",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1331",
+          "pred": "GSTSAL/1331",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "17/Nov/2026",
+          "pred": "2026-11-17",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "950.20",
+          "pred": "950.20",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "23.76",
+          "pred": "23.76",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "23.76",
+          "pred": "23.76",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "47.52",
+          "pred": "300.00",
+          "match": false,
+          "reason": "numeric mismatch (300.00 vs 47.52)"
+        },
+        "total_amount": {
+          "gt": "998.00",
+          "pred": "998.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_15.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SRI VIJAYA LAKSHMI MEDICAL",
+          "pred": "SRI VIJAYA LAKSHMI MEDICAL AND FANCY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37ECZPS3226P2ZD",
+          "pred": "37ECZPS3226P2ZD",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1336",
+          "pred": "GSTSAL/1336",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "18/Nov/2026",
+          "pred": "2026-11-18",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "20380.00",
+          "pred": "20380.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "509.51",
+          "pred": "509.51",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "509.51",
+          "pred": "509.51",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "1019.02",
+          "pred": "1019.02",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "21399.00",
+          "pred": "21399.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_16.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SUNZENNIXX",
+          "pred": "SUNZENNIXX",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AUQPA8037R1ZT",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AUQPA8037R1ZT)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AUQPA8037R1ZT",
+          "match": false,
+          "reason": "gstin mismatch (37AUQPA8037R1ZT vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1337",
+          "pred": "GSTSAL/1337",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "18/Nov/2026",
+          "pred": "2026-11-18",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "846.50",
+          "pred": "846.50",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "21.17",
+          "pred": "21.17",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "21.17",
+          "pred": "21.17",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "42.34",
+          "pred": "42.34",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "889.00",
+          "pred": "889.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_17.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "DEEPIKA SURGICALS",
+          "pred": "DEEPIKA SURGICALS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37CCDPD8249R1ZW",
+          "pred": "37CCDPD8249R1ZW",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1342",
+          "pred": "GSTSAL/1342",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "18/Nov/2026",
+          "pred": "2026-11-18",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "325.00",
+          "pred": "325.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "8.13",
+          "pred": "8.13",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "8.13",
+          "pred": "8.13",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "16.26",
+          "pred": "16.26",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "341.00",
+          "pred": "341.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_18.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "N R I ACADEMY OF SCIENCES",
+          "pred": "N R I ACADEMY OF SCIENCES",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AAATN4207C1Z0",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AAATN4207C1Z0)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AAATN4207C1Z0",
+          "match": false,
+          "reason": "gstin mismatch (37AAATN4207C1Z0 vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/727",
+          "pred": "GSTSAL/727",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "05/Aug/2026",
+          "pred": "2026-08-05",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "8800.00",
+          "pred": "8800.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "220.00",
+          "pred": "220.00",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "220.00",
+          "pred": "220.00",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "440.00",
+          "pred": "440.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "9240.00",
+          "pred": "9240.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_19.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "MAHAJAN PHARMACY",
+          "pred": "MAHAJAN PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37HYNPK5136F1Z2",
+          "pred": "37HYNPK5136F1Z2",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/728",
+          "pred": "GSTSAL/728",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "05/Aug/2026",
+          "pred": "2026-08-05",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "825.00",
+          "pred": "825.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "20.63",
+          "pred": "20.63",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "20.63",
+          "pred": "20.63",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "41.26",
+          "pred": "41.26",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "866.00",
+          "pred": "866.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_20.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "PRASANTHI PHARMACY",
+          "pred": "PRASANTHI PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37BAPPK1430C1Z0",
+          "pred": "37BAPPK1430C1Z0",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/729",
+          "pred": "GSTSAL/729",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "05/Aug/2026",
+          "pred": "2026-08-05",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "3027.00",
+          "pred": "3027.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "75.68",
+          "pred": "75.68",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "75.68",
+          "pred": "75.68",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "151.36",
+          "pred": "151.36",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "3178.00",
+          "pred": "3178.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_22.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "DEEPIKA SURGICALS",
+          "pred": "DEEPIKA SURGICALS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37CCDPD8249R1ZW",
+          "pred": "37CCDPD8249R1ZW",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/730",
+          "pred": "GSTSAL/730",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "05/Aug/2026",
+          "pred": "2026-08-05",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "2049.80",
+          "pred": "2049.80",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "50.34",
+          "pred": "50.34",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "50.34",
+          "pred": "50.34",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "100.68",
+          "pred": "36.38",
+          "match": false,
+          "reason": "numeric mismatch (36.38 vs 100.68)"
+        },
+        "total_amount": {
+          "gt": "2114.00",
+          "pred": "2114.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_23.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SOUTHERN NUCLEAR SCANS",
+          "pred": "SOUTHERN NUCLEAR SCANS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/731",
+          "pred": "GSTSAL/731",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "05/Aug/2026",
+          "pred": "2026-08-05",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "2688.00",
+          "pred": "2688.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "67.20",
+          "pred": "67.20",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "67.20",
+          "pred": "67.20",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "134.40",
+          "pred": "134.40",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "2822.00",
+          "pred": "2822.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_24.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+          "pred": "PRIVATE LIMITED",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AAKCA8758Q1ZL",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AAKCA8758Q1ZL)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AAKCA8758Q1ZL",
+          "match": false,
+          "reason": "gstin mismatch (37AAKCA8758Q1ZL vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/732",
+          "pred": "GSTSAL/732",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "06/Aug/2026",
+          "pred": "2026-08-06",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "8200.00",
+          "pred": "8200.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "205.00",
+          "pred": "205.00",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "205.00",
+          "pred": "205.00",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "410.00",
+          "pred": "410.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "8610.00",
+          "pred": "8610.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_25.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "INDOLABS HEALTHCARE PRIVATE LIMITED(VAIBHAV MEDICALS)",
+          "pred": "LIMITED(VAIBHAV MEDICALS)",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37AAFCI2558D1ZN",
+          "pred": "37AAFCI2558D1ZN",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/134",
+          "pred": "GSTSAL/134",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Apr/2026",
+          "pred": "2026-04-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "837.50",
+          "pred": "837.50",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "20.94",
+          "pred": "20.94",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "20.94",
+          "pred": "20.94",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "41.88",
+          "pred": "41.88",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "879.00",
+          "pred": "879.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_26.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SRI KIRAN PRANAY SURGICALS",
+          "pred": "SRI KIRAN PRANAY SURGICALS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AOCPC4280J1Z0",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AOCPC4280J1Z0)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AOCPC4280J1Z0",
+          "match": false,
+          "reason": "gstin mismatch (37AOCPC4280J1Z0 vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/135",
+          "pred": "GSTSAL/135",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Apr/2026",
+          "pred": "2026-04-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "9500.00",
+          "pred": "9500.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "237.50",
+          "pred": "237.50",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "237.50",
+          "pred": "237.50",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "475.00",
+          "pred": "475.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "9975.00",
+          "pred": "9975.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_27.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "SINGH NAGAR P N P HEALTH CARE",
+          "pred": "SINGH NAGAR P N P HEALTH CARE",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37CLSPA8693L1Z5",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37CLSPA8693L1Z5)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37CLSPA8693L1Z5",
+          "match": false,
+          "reason": "gstin mismatch (37CLSPA8693L1Z5 vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/137",
+          "pred": "GSTSAL/137",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "21/Apr/2026",
+          "pred": "2026-04-21",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "3650.00",
+          "pred": "3650.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "91.25",
+          "pred": "91.25",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "91.25",
+          "pred": "91.25",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "182.50",
+          "pred": "182.50",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "3833.00",
+          "pred": "3833.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_28.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "JANAKIRAMA MATERNITY & GENERAL HOSPITAL",
+          "pred": "HOSPITAL",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/139",
+          "pred": "GSTSAL/139",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "22/Apr/2026",
+          "pred": "2026-04-22",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "4640.00",
+          "pred": "4640.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "116.00",
+          "pred": "116.00",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "116.00",
+          "pred": "116.00",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "232.00",
+          "pred": "232.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "4872.00",
+          "pred": "4872.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_29.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "NORI MEDICARE PRIVATE LIMITED",
+          "pred": "NORI MEDICARE PRIVATE LIMITED",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37AAICN1643F1ZJ",
+          "pred": "37AAICN1643F1ZJ",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1073",
+          "pred": "GSTSAL/1073",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "01/Oct/2026",
+          "pred": "2026-10-01",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "9950.00",
+          "pred": "9950.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "612.75",
+          "pred": "612.75",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "612.75",
+          "pred": "612.75",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "1225.50",
+          "pred": "1225.50",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "11176.00",
+          "pred": "11176.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    },
+    {
+      "filename": "invoice_30.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "ANDHRA HOSPITALS BHAVANIPURAM PRIVATE LIMITED",
+          "pred": "PRIVATE LIMITED",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37AAKCA8758Q1ZL",
+          "pred": "37COAPS3244E1Z1",
+          "match": false,
+          "reason": "gstin mismatch (37COAPS3244E1Z1 vs 37AAKCA8758Q1ZL)"
+        },
+        "customer_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37AAKCA8758Q1ZL",
+          "match": false,
+          "reason": "gstin mismatch (37AAKCA8758Q1ZL vs 37COAPS3244E1Z1)"
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1316",
+          "pred": "GSTSAL/1316",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "14/Nov/2026",
+          "pred": "2026-11-14",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "6500.00",
+          "pred": "6500.00",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "162.50",
+          "pred": "162.50",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "162.50",
+          "pred": "162.50",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "325.00",
+          "pred": "325.00",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "6825.00",
+          "pred": "6825.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_31.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "MAMATA MEDICALS",
+          "pred": "MAMATA MEDICALS",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37AOSPN1761M1Z7",
+          "pred": "37AOSPN1761M1Z7",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/1050",
+          "pred": "GSTSAL/1050",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "29/Sep/2026",
+          "pred": "2026-09-29",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "10404.50",
+          "pred": "10404.50",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "503.86",
+          "pred": "503.86",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "503.86",
+          "pred": "503.86",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "1007.72",
+          "pred": "1007.72",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "11412.00",
+          "pred": "11412.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": false
+    },
+    {
+      "filename": "invoice_32.pdf",
+      "fields": {
+        "vendor_name": {
+          "gt": "SIVA SAI ENTERPRISES",
+          "pred": "SIVA SAI ENTERPRISES",
+          "match": true,
+          "reason": ""
+        },
+        "customer_name": {
+          "gt": "PRASANTHI PHARMACY",
+          "pred": "PRASANTHI PHARMACY",
+          "match": true,
+          "reason": ""
+        },
+        "vendor_gstin": {
+          "gt": "37COAPS3244E1Z1",
+          "pred": "37COAPS3244E1Z1",
+          "match": true,
+          "reason": ""
+        },
+        "customer_gstin": {
+          "gt": "37BAPPK1430C1Z0",
+          "pred": "37BAPPK1430C1Z0",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_number": {
+          "gt": "GSTSAL/379",
+          "pred": "GSTSAL/379",
+          "match": true,
+          "reason": ""
+        },
+        "invoice_date": {
+          "gt": "02/Jun/2026",
+          "pred": "2026-06-02",
+          "match": true,
+          "reason": ""
+        },
+        "subtotal": {
+          "gt": "16753.50",
+          "pred": "16753.50",
+          "match": true,
+          "reason": ""
+        },
+        "cgst_amount": {
+          "gt": "418.84",
+          "pred": "418.84",
+          "match": true,
+          "reason": ""
+        },
+        "sgst_amount": {
+          "gt": "418.84",
+          "pred": "418.84",
+          "match": true,
+          "reason": ""
+        },
+        "tax_amount": {
+          "gt": "837.68",
+          "pred": "837.68",
+          "match": true,
+          "reason": ""
+        },
+        "total_amount": {
+          "gt": "17591.00",
+          "pred": "17591.00",
+          "match": true,
+          "reason": ""
+        }
+      },
+      "validation_is_valid": true
+    }
+  ]
+}

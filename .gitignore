@@ -73,5 +73,14 @@ Desktop.ini
 *.ckpt
 *.safetensors
 *.onnx
-models/
+/models/
 checkpoints/
+!backend/app/models/
+backend/model_cache/
+!backend/checkpoints/
+!backend/checkpoints/layoutlmv3-fatura2/
+!backend/checkpoints/layoutlmv3-fatura2/model.safetensors
+backend/checkpoints/layoutlmv3-fatura2/checkpoint-*/
+
+evaluation/fatura2_test50/
+evaluation/fatura2_fresh25/
